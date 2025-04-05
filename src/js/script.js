@@ -24,7 +24,7 @@ function updateHeaderBackground() {
     // 1. User has scrolled, OR
     // 2. Mega menu is open
     const shouldBeBlack = window.scrollY > 0 || isMenuOpen;
-    navDiv.style.backgroundColor = shouldBeBlack ? '#0B5C2F' : 'transparent';
+    navDiv.style.backgroundColor = shouldBeBlack ? '#326555' : 'transparent';
 }
 
 megaMenuToggle.addEventListener("click", function (event) {
@@ -35,9 +35,9 @@ megaMenuToggle.addEventListener("click", function (event) {
     isMenuOpen = !isMenuOpen;
 
     if (isMenuOpen || window.scrollY > 80) {
-        div3rd.classList.add("bg-[#0B5C2F]", "shadow-lg", "translate-y-0");
+        div3rd.classList.add("bg-[#326555]", "shadow-lg", "translate-y-0");
       } else {
-        div3rd.classList.remove("bg-[#0B5C2F]", "shadow-lg", "translate-y-0");
+        div3rd.classList.remove("bg-[#326555]", "shadow-lg", "translate-y-0");
       }
 
     // Toggle mega menu dropdowns, etc.
@@ -47,7 +47,7 @@ megaMenuToggle.addEventListener("click", function (event) {
     excludedItems.forEach(item => {
         item.classList.toggle("hidden", isMenuOpen);
     });
-    navDiv.style.backgroundColor = isMenuOpen || window.scrollY > 0 ? '#0B5C2F' : 'transparent';
+    navDiv.style.backgroundColor = isMenuOpen || window.scrollY > 0 ? '#326555' : 'transparent';
 
     // Toggle the icons: show cross when open, burger when closed
     if (isMenuOpen) {
@@ -139,13 +139,13 @@ window.addEventListener("scroll", function () {
         div2nd.classList.add("fixed");
         div2nd.classList.remove("absolute");
     
-        div3rd.classList.add("bg-[#0B5C2F]", "shadow-lg", "translate-y-0");
+        div3rd.classList.add("bg-[#326555]", "shadow-lg", "translate-y-0");
       } else {
         // Restore initial styles when scrolled back up AND menu is closed
         div2nd.classList.add("absolute");
         div2nd.classList.remove("fixed");
     
-        div3rd.classList.remove("bg-[#0B5C2F]", "shadow-lg", "translate-y-0");
+        div3rd.classList.remove("bg-[#326555]", "shadow-lg", "translate-y-0");
       }
   });
 

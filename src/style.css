@@ -111,16 +111,16 @@ body {
   }
 
   .myBG{
-    background: url("../public/footerBg.png");
+    background: url("../public/about_us_main.png") no-repeat center/cover;
   }
 
   
-  /* @media (min-width: 1024px) {
+  @media (max-width: 1024px) {
     .myBG {
-    background: url("../public/section_two_bg.png");
-    background-size: 105%;
+    background: url("../public/about_us_mob.png") no-repeat center/cover;
+    /* background-size: 105%; */
     }
-} */
+}
 
   
 
@@ -154,7 +154,7 @@ body {
   }
   @media (min-width:1024px) {
     .bg-footer-lg{
-      background: url("../public/hero.png");
+      background: url("../public/footerbg.png");
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -166,19 +166,19 @@ body {
     transition: color 0.3s ease;
   }
   .tab.active {
-    color: #000; /* Black color for active tab */
+    color: #27594F; /* Black color for active tab */
   }
   /* Mobile styles */
   @media screen and (max-width: 768px) {
     .tab {
-      background-color: #000;
+      background-color: #e5e5e5;
       transition: color 0.3s ease;
-      color: #fff;
+      color: #27594F;
     }
     
     .tab.active {
-      background: url("../public/themebgimg.webp") no-repeat center/cover;
-      color: #000;
+      background-color: #27594F;
+      color: #fff;
       transition: color 0.3s ease;
       border-bottom: 2px solid #fff; /* Adding an underline for active tab */
       /* Alternative: You could use opacity or a different highlight method */
@@ -1302,4 +1302,72 @@ body.modal {
 
 #modal{
   overscroll-behavior: contain; /* Prevent scroll chaining */
+}
+
+.textFormInput{
+  background-color: #295A4E80;
+}
+
+.bg-main{
+  background-color: #32644D;
+}
+
+.text-Title{
+  color: #0B5C2F;
+}
+
+.bg-main-dark{
+  background-color: #183C31;
+}
+
+.bg-green-fade{
+  background-color: #244E41;
+}
+
+.bg-yellow{
+  background-color: #F2C94C;
+}
+
+.bg-yellow-main{
+  background-color: #F8AF41;
+}
+
+.text-yellow-main{
+  color: #F8AF41;
+}
+
+.bg-brochure{
+  background: url("../public/brochure-mock.png") no-repeat center center;
+}
+
+@media (max-width:1024px) {
+  .bg-brochure{
+    background: #163b25;
+  }
+}
+
+.text-clip {
+  background-image: linear-gradient(191.56deg, #CD9136 55.67%, #67491B 105.42%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.bg-gradient{
+  background-image: linear-gradient(191.56deg, #CD9136 55.67%, #67491B 105.42%);
+}
+
+.bg-kasauli{
+  background-image: url("../public/pride_of_kasauli_lg.png");
+}
+
+@media (max-width:1024px) {
+  .bg-kasauli{
+  background-image: url("../public/pride_of_kasauli.png");
+  }
+}
+
+.contact_us_bg{
+  background: url("../public/contact_us_bg.png") no-repeat center/cover;
 }
