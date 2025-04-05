@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Supera-300';
+    src: url('../public/fonts/SuperaGothic-Light.otf') format('opentype');
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Supera-400';
+    src: url('../public/fonts/SuperaGothic-Book.otf') format('opentype');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Supera-500';
+    src: url('../public/fonts/SuperaGothic-Regular.otf') format('opentype');
+    font-weight: 500;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Supera-600';
+    src: url('../public/fonts/SuperaGothic-Bold.otf') format('opentype');
+    font-weight: 600;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Supera-700';
+    src: url('../public/fonts/SuperaGothic-ExtraBold.otf') format('opentype');
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Supera-800';
+    src: url('../public/fonts/SuperaGothic-Black.otf') format('opentype');
+    font-weight: 800;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Supera-900';
+    src: url('../public/fonts/SuperaGothic-UltraBlack.otf') format('opentype');
+    font-weight: 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'bebas_Neue';
+    src: url('../public/fonts/BebasNeue-Regular.ttf') format('opentype');
+    font-weight: 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'poppins';
+    src: url('../public/fonts/Poppins-Light.ttf') format('opentype');
+    font-weight: 300;
+    font-display: swap;
+  }
+
+  :root {
+    --font-supera-300: 'Supera-300', sans-serif;
+    --font-supera-400: 'Supera-400', sans-serif;
+    --font-supera-500: 'Supera-500', sans-serif;
+    --font-supera-600: 'Supera-600', sans-serif;
+    --font-supera-700: 'Supera-700', sans-serif;
+    --font-supera-800: 'Supera-800', sans-serif;
+    --font-supera-900: 'Supera-900', sans-serif;
+    --font-bebas_Neue: 'bebas_Neue', sans-serif;
+    --font-poppins: 'poppins', sans-serif;
+  }
+}
+
+/* Custom utility classes for the fonts */
+.font-supera300 {
+  font-family: var(--font-supera-300);
+}
+.font-supera400 {
+  font-family: var(--font-supera-400);
+}
+.font-supera500 {
+  font-family: var(--font-supera-500);
+}
+.font-supera600 {
+  font-family: var(--font-supera-600);
+}
+.font-supera700 {
+  font-family: var(--font-supera-700);
+}
+.font-supera800 {
+  font-family: var(--font-supera-800);
+}
+.font-supera900 {
+  font-family: var(--font-supera-900);
+}
+.font-bebas_Neue {
+  font-family: var(--font-bebas_Neue);
+}
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+ 
+@layer components {
+  .menu-open {
+    @apply opacity-100 visible max-h-[500px] translate-y-0 transition-all duration-300 ease-in-out;
+  }
+
+  .menu-container {
+    @apply opacity-0 invisible max-h-0 -translate-y-2 transition-all duration-300 ease-in-out overflow-hidden;
+  }
+
+  .menu-background {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+}
+
+
+@layer utilities {
+  .bg-mock-big {
+    background-image: url('../public/mock_big.webp');
+  }
+}

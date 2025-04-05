@@ -1,0 +1,29 @@
+/* Tab styling for product slider */
+
+/* Default styles (mobile) - we keep the existing styling */
+.tab {
+    /* Current mobile styling is maintained in the HTML classes */
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    /* For non-active tabs, fade out the color */
+    .tab {
+        opacity: 0.6;
+        transition: opacity 0.3s ease, color 0.3s ease;
+        color: #787878; /* Faded text color */
+    }
+    
+    /* For active tab, make it fully black */
+    .tab.active {
+        opacity: 1;
+        color: #000000; /* Full black color */
+        font-weight: 700; /* Make it bold */
+    }
+}
+
+/* Keep mobile styling independent */
+@media (max-width: 767px) {
+    /* Mobile tabs already have appropriate styling in HTML */
+    /* This ensures desktop styles don't affect mobile */
+}
