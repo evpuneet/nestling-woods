@@ -31,10 +31,6 @@ const slides = [
   }
 ];
 
-let currentIndex = 0;
-let nextIndex = 1;
-let autoSlide;
-const slideDuration = 5000; // 5 seconds
 
   // DOM Elements
   const slide2 = document.getElementById("slide2");
@@ -46,69 +42,80 @@ const slideDuration = 5000; // 5 seconds
   const nextBtn = document.getElementById('next');
   const prevBtn = document.getElementById('prev');
 
+
+  let currentIndex = 0;
+  let nextIndex = 1;
+  let autoSlide;
+  let isTransitioning = false; // Track if a transition is active
+  const slideDuration = 5000;
+  
+  // DOM Elements and other variables remain the same
+  
   function updateProgressBar() {
     let progress = ((currentIndex + 1) / slides.length) * 100;
     progressBar.style.width = `${progress}%`;
   
     // Reset smoothly when last slide completes
-    if (currentIndex === 0) {
-      progressBar.style.transition = "none"; // Remove animation for instant reset
-      progressBar.style.width = (1/ slides.length) * 100;; // Initial position
-      // setTimeout(() => {
-      //   progressBar.style.transition = "all 1s linear"; // Restore animation
-      // }, 500); // Small delay to allow CSS transition reset
+    if (currentIndex === slides.length - 1) {
+      progressBar.style.transition = "none";
+      progressBar.style.width = '0%';
+      // Force a reflow to apply the reset without transition
+      void progressBar.offsetWidth;
+      progressBar.style.transition = "width 5s linear";
+    } else {
+      progressBar.style.transition = "width 5s linear";
     }
   }
-
-  // Function to update slider content with a fade effect
+  
   function updateSlider() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+  
     const nextSlide = slides[nextIndex];
+    const activeSlide = slider.classList.contains("opacity-100") ? slider : slide2;
+    const inactiveSlide = activeSlide === slider ? slide2 : slider;
   
-    if (slider.classList.contains("opacity-100")) {
-      // Update slide 2 content
-      slide2.querySelector("img").src = nextSlide.image;
-      slide2.querySelector("h3").textContent = nextSlide.title;
-      slide2.querySelector("p").textContent = nextSlide.text;
+    // Update inactive slide content
+    inactiveSlide.querySelector("img").src = nextSlide.image;
+    inactiveSlide.querySelector("h3").textContent = nextSlide.title;
+    inactiveSlide.querySelector("p").textContent = nextSlide.text;
   
-      // Crossfade
-      slider.classList.replace("opacity-100", "opacity-0");
-      slide2.classList.replace("opacity-0", "opacity-100");
-    } else {
-      // Update slide 1 content
-      slider.querySelector("img").src = nextSlide.image;
-      slider.querySelector("h3").textContent = nextSlide.title;
-      slider.querySelector("p").textContent = nextSlide.text;
-  
-      // Crossfade
-      slide2.classList.replace("opacity-100", "opacity-0");
-      slider.classList.replace("opacity-0", "opacity-100");
-    }
+    // Trigger transition
+    activeSlide.classList.replace("opacity-100", "opacity-0");
+    inactiveSlide.classList.replace("opacity-0", "opacity-100");
   
     currentIndex = nextIndex;
-    nextIndex = (nextIndex + 1) % slides.length;
-
-    updateProgressBar(); // Update progress bar on every slide change
+    updateProgressBar();
+  
+    // Allow transitions after 500ms (match CSS transition duration)
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 500);
   }
   
-  // Start auto-slide
-  function startAutoSlide() {
-    autoSlide = setInterval(updateSlider, 5000); // Change every 5 seconds
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => {
+      nextIndex = (currentIndex + 1) % slides.length;
+      updateSlider();
+    }, slideDuration);
   }
   
-  
-
-  // Event Listeners for buttons
+  // Event Listeners
   nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateSlider(currentIndex);
-    updateProgressBar();
+    nextIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+    resetAutoSlide();
   });
-
+  
   prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateSlider(currentIndex);
-    updateProgressBar();
+    nextIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider();
+    resetAutoSlide();
   });
-
-  // Initialize on page load
-  document.addEventListener("DOMContentLoaded", startAutoSlide);
+  
+  // Initialize
+  document.addEventListener("DOMContentLoaded", () => {
+    updateProgressBar();
+    resetAutoSlide();
+  });
