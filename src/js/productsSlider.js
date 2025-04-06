@@ -1,8 +1,8 @@
 const apartments = [
-    { name: "Semi Furnished", price: "3000 ", image: "url('./public/hero.png')" },
-    { name: "Fully Furnished", price: "2300", image: "url('./public/keyHighlight_mobli.png')" },
-    { name: "Semi Furnished", price: "2500", image: "url('./public/keyHighlight_mobli2.webp')" },
-    { name: "Fully Furnished", price: "2300", image: "url('./public/keyHighlight_mobli3.webp')" },
+    { name: "fully Furnished", price: "706.93 ", image: "url('./public/product1.png')", para: "" },
+    { name: "Fully Furnished", price: "922.13", image: "url('./public/product2.png')", para: "" },
+    // { name: "Semi Furnished", price: "2500", image: "url('./public/keyHighlight_mobli2.webp')" },
+    // { name: "Fully Furnished", price: "2300", image: "url('./public/keyHighlight_mobli3.webp')" },
 ];
 
 let currentSlide = 0;
@@ -11,6 +11,7 @@ const AUTOPLAY_DELAY = 5000;
 
 // DOM Elements
 const sliderContainer = document.getElementById("slider-container");
+const slidepara = document.getElementById("productSlideMd");
 const sliderContainerMobile = document.getElementById("slider-container-res");
 const slideNumber = document.getElementById("slide-number");
 const apartmentName = document.getElementById("apartment-name");

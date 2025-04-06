@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     title.style.opacity = "1";
                     title.style.fontSize = "";
                     title.style.lineHeight = "";
-                    title.classList.remove("text-sm", "-rotate-90");
+                    title.classList.remove("text-[12px]", "-rotate-90");
                     title.classList.add("text-lg", "xs:text-xl", "lg:text-3xl", "3xl:text-4xl", "opacity-100", "duration-500");
                 } else {
                     // Apply vertical style for inactive slides
@@ -88,7 +88,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     title.style.fontSize = "x-large";
                     title.style.lineHeight = "2.5";
                     title.classList.remove("text-lg", "xs:text-xl", "lg:text-3xl", "3xl:text-4xl");
-                    title.classList.add("text-sm", "opacity-100", "duration-500", "-rotate-90");
+                    title.classList.add("text-[12px]", "opacity-100", "duration-500", "-rotate-90");
+                    
                 }
             }
         });

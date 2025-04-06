@@ -1,4 +1,4 @@
-const swiper = new Swiper(".mySwiper", {
+const testswiper = new Swiper(".testSwiper", {
   loop: false,
   effect: "fade",
   fadeEffect: { crossFade: true },
@@ -29,10 +29,22 @@ function updateActivePagination(index) {
   });
 
   // Set active state
+  const container = document.querySelector('.testimonial-scroll-container');
   const activeButton = document.querySelector(`.testimonial-button[data-index="${index}"]`);
-  if (activeButton) {
+  if (activeButton && container) {
     activeButton.classList.add("active");
     activeButton.style.backgroundColor = "#FFFFFFCC";
+
+     // Calculate scroll position relative to container
+     const buttonTop = activeButton.offsetTop;
+     const containerHeight = container.offsetHeight;
+     const buttonHeight = activeButton.offsetHeight;
+ 
+     // Scroll only the container, not the whole page
+     container.scrollTo({
+       top: buttonTop - (containerHeight / 2) + (buttonHeight / 2),
+       behavior: 'smooth'
+     });
 
     // Set dark text colors
     const activeH5 = activeButton.querySelector('h5');
@@ -55,9 +67,10 @@ updateActivePagination(0);
 paginationButtons.forEach((button) => {
   button.addEventListener("click", function () {
     const index = parseInt(this.getAttribute("data-index"));
-    swiper.slideTo(index, 1000);
+    testswiper.slideTo(index, 1000);
     updateActivePagination(index);
   });
 });
 
-swiper.on("slideChange", () => updateActivePagination(swiper.activeIndex));
+testswiper.on("slideChange", () => updateActivePagination(testswiper.activeIndex));
+

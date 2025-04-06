@@ -42,6 +42,7 @@
     --text-6xl--line-height: 1;
     --font-weight-thin: 100;
     --font-weight-light: 300;
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -561,6 +562,9 @@
   }
   .col-span-2 {
     grid-column: span 2 / span 2;
+  }
+  .col-span-5 {
+    grid-column: span 5 / span 5;
   }
   .col-span-6 {
     grid-column: span 6 / span 6;
@@ -1254,8 +1258,17 @@
   .max-h-\[150px\] {
     max-height: 150px;
   }
+  .max-h-\[366px\] {
+    max-height: 366px;
+  }
+  .max-h-\[368px\] {
+    max-height: 368px;
+  }
   .max-h-\[370px\] {
     max-height: 370px;
+  }
+  .max-h-\[373px\] {
+    max-height: 373px;
   }
   .max-h-\[375px\] {
     max-height: 375px;
@@ -3718,6 +3731,10 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
@@ -4004,6 +4021,12 @@
   }
   .text-\[\#FFF\] {
     color: #FFF;
+  }
+  .text-\[\#\] {
+    color: #;
+  }
+  .text-\[\#apartment-price\] {
+    color: #apartment-price;
   }
   .text-\[\#fff\] {
     color: #fff;
@@ -4666,16 +4689,64 @@
       top: calc(var(--spacing) * 0);
     }
   }
+  .after\:top-\[1\%\] {
+    &::after {
+      content: var(--tw-content);
+      top: 1%;
+    }
+  }
+  .after\:top-\[11\%\] {
+    &::after {
+      content: var(--tw-content);
+      top: 11%;
+    }
+  }
   .after\:top-\[50\%\] {
     &::after {
       content: var(--tw-content);
       top: 50%;
     }
   }
+  .after\:top-\[80\%\] {
+    &::after {
+      content: var(--tw-content);
+      top: 80%;
+    }
+  }
   .after\:top-\[103\%\] {
     &::after {
       content: var(--tw-content);
       top: 103%;
+    }
+  }
+  .after\:top-\[105\%\] {
+    &::after {
+      content: var(--tw-content);
+      top: 105%;
+    }
+  }
+  .after\:top-\[108\%\] {
+    &::after {
+      content: var(--tw-content);
+      top: 108%;
+    }
+  }
+  .after\:top-\[110\%\] {
+    &::after {
+      content: var(--tw-content);
+      top: 110%;
+    }
+  }
+  .after\:top-\[112\%\] {
+    &::after {
+      content: var(--tw-content);
+      top: 112%;
+    }
+  }
+  .after\:top-\[115\%\] {
+    &::after {
+      content: var(--tw-content);
+      top: 115%;
     }
   }
   .after\:top-\[118\%\] {
@@ -4688,6 +4759,12 @@
     &::after {
       content: var(--tw-content);
       top: 120%;
+    }
+  }
+  .after\:top-\[140\%\] {
+    &::after {
+      content: var(--tw-content);
+      top: 140%;
     }
   }
   .after\:bottom-0 {
@@ -4837,6 +4914,12 @@
       background-color: #000;
     }
   }
+  .after\:bg-\[\#000000\] {
+    &::after {
+      content: var(--tw-content);
+      background-color: #000000;
+    }
+  }
   .after\:bg-\[\#00000060\] {
     &::after {
       content: var(--tw-content);
@@ -4865,6 +4948,12 @@
     &::after {
       content: var(--tw-content);
       background-color: #EB4C4C;
+    }
+  }
+  .after\:bg-\[\#e5e5e5\] {
+    &::after {
+      content: var(--tw-content);
+      background-color: #e5e5e5;
     }
   }
   .after\:bg-white {
@@ -6321,6 +6410,11 @@
       height: 100%;
     }
   }
+  .md\:max-h-\[366px\] {
+    @media (width >= 48rem) {
+      max-height: 366px;
+    }
+  }
   .md\:w-1\/2 {
     @media (width >= 48rem) {
       width: calc(1/2 * 100%);
@@ -6491,6 +6585,11 @@
   .md\:grid-cols-4 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-5 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
   .md\:grid-cols-6 {
@@ -6852,6 +6951,16 @@
       line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
+  .md\:text-\[0px\] {
+    @media (width >= 48rem) {
+      font-size: 0px;
+    }
+  }
+  .md\:text-\[9px\] {
+    @media (width >= 48rem) {
+      font-size: 9px;
+    }
+  }
   .md\:text-\[12px\] {
     @media (width >= 48rem) {
       font-size: 12px;
@@ -6892,6 +7001,16 @@
       font-size: 18px;
     }
   }
+  .md\:text-\[19px\] {
+    @media (width >= 48rem) {
+      font-size: 19px;
+    }
+  }
+  .md\:text-\[20px\] {
+    @media (width >= 48rem) {
+      font-size: 20px;
+    }
+  }
   .md\:text-\[22px\] {
     @media (width >= 48rem) {
       font-size: 22px;
@@ -6905,6 +7024,11 @@
   .md\:text-\[25px\] {
     @media (width >= 48rem) {
       font-size: 25px;
+    }
+  }
+  .md\:text-\[29px\] {
+    @media (width >= 48rem) {
+      font-size: 29px;
     }
   }
   .md\:text-\[30px\] {
@@ -6965,9 +7089,24 @@
       color: #32644D;
     }
   }
+  .md\:text-\[\#37493C\] {
+    @media (width >= 48rem) {
+      color: #37493C;
+    }
+  }
   .md\:text-\[\#787878\] {
     @media (width >= 48rem) {
       color: #787878;
+    }
+  }
+  .md\:text-\[\#\] {
+    @media (width >= 48rem) {
+      color: #;
+    }
+  }
+  .md\:text-\[\#apartment-price\] {
+    @media (width >= 48rem) {
+      color: #apartment-price;
     }
   }
   .md\:text-black {
@@ -7766,6 +7905,12 @@
       text-align: left;
     }
   }
+  .lg\:text-2xl {
+    @media (width >= 64rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
   .lg\:text-3xl {
     @media (width >= 64rem) {
       font-size: var(--text-3xl);
@@ -8360,6 +8505,16 @@
       margin-left: 27px;
     }
   }
+  .\32 xl\:block {
+    @media (width >= 96rem) {
+      display: block;
+    }
+  }
+  .\32 xl\:hidden {
+    @media (width >= 96rem) {
+      display: none;
+    }
+  }
   .\32 xl\:h-\[65vh\] {
     @media (width >= 96rem) {
       height: 65vh;
@@ -8403,6 +8558,11 @@
   .\32 xl\:max-w-\[1000px\] {
     @media (width >= 96rem) {
       max-width: 1000px;
+    }
+  }
+  .\32 xl\:grid-cols-7 {
+    @media (width >= 96rem) {
+      grid-template-columns: repeat(7, minmax(0, 1fr));
     }
   }
   .\32 xl\:grid-cols-8 {

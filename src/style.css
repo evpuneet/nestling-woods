@@ -1322,7 +1322,7 @@ body.sidebar {
 
 @media (max-width:1024px) {
   .bg-brochure{
-    background: #163b25;
+    background: url("../public/brochure-mock-mob.png") no-repeat center center;
   }
 }
 
