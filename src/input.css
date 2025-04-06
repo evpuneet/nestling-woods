@@ -121,3 +121,11 @@
     background-image: url('../public/mock_big.webp');
   }
 }
+
+
+@layer base {
+  input[type='checkbox'] {
+    @apply accent-[#E98F0A];
+    @apply text-white;
+  }
+}
