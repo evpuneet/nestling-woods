@@ -2,12 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("#price, #payment-structure, #current-offer");
     const navItems = document.querySelectorAll(".nav-item-price");
 
+    const setActiveNavItem = (targetId) => {
+        navItems.forEach((item) => {
+            const isActive = item.dataset.target === targetId;
+            item.classList.toggle("active-plan-header", isActive);
+        });
+    };
+
     const observer = new IntersectionObserver(
         (entries) => {
             let activeEntry = null;
 
             entries.forEach((entry) => {
-                // Track the entry with the highest intersection ratio
                 if (entry.isIntersecting) {
                     if (!activeEntry || entry.intersectionRatio > activeEntry.intersectionRatio) {
                         activeEntry = entry;
@@ -16,17 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             if (activeEntry) {
-                const targetId = activeEntry.target.id;
-                navItems.forEach((item) => {
-                    const isActive = item.dataset.target === targetId;
-                    item.classList.toggle("active-plan-header", isActive);
-                });
+                setActiveNavItem(activeEntry.target.id);
             }
         },
-        { 
-            threshold: 0.25 // Lower threshold to 25% visibility
-        }
+        { threshold: 0.25 }
     );
 
     sections.forEach((section) => observer.observe(section));
+
+    // ✅ Fix for mobile: if scroll is at the very top, manually highlight #price
+    window.addEventListener("scroll", () => {
+        if (window.scrollY === 20 || window.scrollY === 0) {
+            setActiveNavItem("price");
+        }
+
+        console.log(window.scrollY)
+    });
 });

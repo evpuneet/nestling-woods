@@ -6,6 +6,7 @@
     <link href="./src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./src/js/locationSwiper.js"></script>
     <title>Aurum</title>
     <style>
       html{
@@ -55,12 +56,12 @@
 </head>
 <body>
     <!-- header -->
-    <nav class="">
-      <div class="w-full z-[999999999999999999] fixed top-0 left-0">
+    <nav id="navDiv" >
+      <div class="w-full z-[50] fixed top-0 left-0 " style="z-index: 550;">
           <div
-          class="relative w-full transition-all backdrop-blur bg-[#000000ef] shadow-lg py-2 lg:py-1 translate-y-0 bg-theme flex justify-center items-start duration-500"
+            class="relative w-full transition-all py-2 lg:py-1 xl:py-4 flex justify-center items-center duration-500 bg-theme"
           >
-            <div
+          <div
               class="duration-500 xl:py-1 lg:py-1 w-full 2xl:container flex justify-between lg:justify-around 3xl:justify-between items-center px-1.5 cxs:px-5 xl:px-0 mx-2 "
             >
               <a
@@ -432,7 +433,7 @@
                 <div id="backdrop" class="fixed bg-black/50 inset-0 h-[100vh] transition-all backdrop-blur-md"></div>
                 <div
                 id="sidebar"
-                class="fixed top-0 right-0 h-[100vh] bg-theme w-[80%] text-white shadow-lg transform translate-x-full transition-transform duration-300"
+                class="fixed top-0 right-0 h-[100vh] bg-theme w-[80%] text-white shadow-lg transform translate-x-full transition-transform duration-300 "
                 >
                   <div class="flex flex-col min-h-full pt-5 relative">
                       <div class="flex items-center justify-between pl-5 pr-2">
@@ -612,40 +613,16 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="hidden md:block mt-[-0.5px] shadow-xl shadow-[#00000039] absolute top-full w-full  md:w-[90%] px-2 sm:rounded-b-2xl lg:rounded-b-3xl backdrop-blur-md bg-nav-theme overflow-auto">
-              <ul class="my-3.5 sm:my-2 lg:my-3 flex justify-evenly gap-x-3 sm:gap-x-0 ">
-                  <li  data-target="project-walk-through-lg"
-                      class="sm:min-w-[130px] px-4 sm:px-6 py-1.5 inline-flex justify-center rounded-lg whitespace-nowrap font-supera700 text-sm md:text-[13px] md:text-sm lg:text-xl text-center tracking-wide uppercase text-[#121212] sm:text-[#474536] bg-[#FFFFFF80] sm:bg-inherit sm:duration-1000 bg-no-repeat bg-cover bg-center gallery-tabs-navigate active-gallery-tab"
-                  >
-                  <a href="#project-walk-through-lg">Project walk through</a>
-                  </li>
-                  <li data-target="sample-flat"
-                      class="sm:min-w-[130px] px-4 sm:px-6 py-1.5 inline-flex justify-center rounded-lg whitespace-nowrap font-supera700 text-sm md:text-[13px] md:text-sm lg:text-xl text-center tracking-wide uppercase text-[#121212] sm:text-[#474536] bg-[#FFFFFF80] sm:bg-inherit sm:duration-1000 bg-no-repeat bg-cover bg-center gallery-tabs-navigate"
-                  >
-                  <a href="#sample-flat">Sample flat</a>
-                  </li> 
-                  <li data-target="project-gallery"
-                      class="sm:min-w-[130px] px-4 sm:px-6 py-1.5 inline-flex justify-center rounded-lg whitespace-nowrap font-supera700 text-sm md:text-[13px] md:text-sm lg:text-xl text-center tracking-wide uppercase text-[#121212] sm:text-[#474536] bg-[#FFFFFF80] sm:bg-inherit sm:duration-1000 bg-no-repeat bg-cover bg-center gallery-tabs-navigate"
-                  >
-                  <a href="#project-gallery">Project Gallery</a>
-                  </li>
-                  <li data-target="construction-updates"
-                      class="sm:min-w-[130px] px-4 sm:px-6 py-1.5 inline-flex justify-center rounded-lg whitespace-nowrap font-supera700 text-sm md:text-[13px] md:text-sm lg:text-xl text-center tracking-wide uppercase text-[#121212] sm:text-[#474536] bg-[#FFFFFF80] sm:bg-inherit sm:duration-1000 bg-no-repeat bg-cover bg-center gallery-tabs-navigate"
-                  >
-                  <a href="#construction-updates">Construction updates</a>
-                  </li>
-              </ul>
-            </div>          
+            </div>  
           </div>
         </div>
     </nav>
     
 
      <!-- hero page starts-->
-      <div>
-      <div class="mt-[50px] md:mt-0 beforeMDinvisible">
-          <div class="w-full h-[85vh] bg-subHeader-local bg-cover bg-bottom bg-no-repeat">
+    <div>
+      <div class="mb-22 sm:mb-0">
+          <div class="hidden sm:block w-full h-[85vh] bg-location-map bg-cover bg-bottom bg-no-repeat">
               <div class="w-full h-full flex justify-center items-center relative bg-[linear-gradient(90.47deg,_rgba(0,_0,_0,_0)_-11.87%,_rgba(7,_7,_7,_0.5)_35.31%)]">
                   <div class="w-full h-[20%] absolute top-0 left-0 bg-[linear-gradient(180deg,_#00000080_14.24%,_#00000000_79.76%)]"></div>
                   <h1 class="px-4 lg:px-0 font-supera600 text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl leading-tight tracking-[0.4px] uppercase text-center text-[#FFFFFF] w-full max-w-[720px]">Live at the heart of all the action!</h1>
@@ -653,899 +630,426 @@
           </div>
       </div>
 
-    <div id="project-walk-through-lg" class="">
-        <div class="px-5 sm:px-5 mt-[60px] mb-[20px] beforeMDinvisible xl:container mx-auto">
-            <h2 class="undefined uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-[#32644D]" >Project Walk Through</h2>
-            <p
-                class="font-supera600 capitalize cmd:mt-1.5 max-w-full tracking-wide sm:tracking-normal text-[13px] cxs:text-sm sm:text-[15px] md:text-[16px] cmd:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#5A5454]"
-                style="color: rgb(90, 84, 84);"
-            >
-                Explore The medallion Aurum mohali Project gallery &amp; Construction Updates.
-            </p>
-        </div>
-        <section id="project-walk-through-lg-vid" class="beforeMDinvisible block w-full mt-7 md:mt-10">
-            <div class="w-[95%] md:w-[88%] 3xl:container lg:mx-auto mx-auto grid grid-cols-12 gap-3">
-                <div class="col-span-12 w-full h-[70vh] 3xl:h-[80vh] overflow-hidden relative">
-                    <div class="relative w-full h-full">
-                        <video src="./public/Location-video.mp4" poster="./public/gallery1.png" loop="" controls="" playsinline="" class="w-full h-full object-cover rounded-lg">
-                            Your browser does not support the video tag.
-                        </video>
+      <div class="section-gap">
+        <section class="mx-auto px-5 md:w-[90%]">
+            <div>
+                <h4 class="text-[#32644D] font-supera700 text-center md:text-left text-2xl xs:text-3xl md:text-4xl lg:text-[42px] leading-tight uppercase">
+                    Why <br class="hidden md:block" />
+                    nestling Woods?
+                </h4>
+                <div class="grid grid-cols-2 gap-y-10 gap-x-3 md:gap-y-0 md:grid-cols-4 mt-14">
+                  <div class="shadow-[0px_-1.01px_4.04px_0px_rgba(0,0,0,0.25)] md:shadow-none rounded-2xl md:rounded-none p-2 py-4 md:p-0 md:py-0 ">
+                      <div class="md:border-r-2 border-[#BFBDAC] pr-5 lg:pr-7 2xl:pr-10 flex flex-col gap-y-2 lg:gap-y-3">
+                        <div class="relative w-[50px] h-[50px] xs:w-[55px] xs:h-[55px] md:w-[63px] md:h-[63px]">
+                            <img
+                                alt="Descriptive alt text"
+                                loading="lazy"
+                                width="100"
+                                height="100"
+                                decoding="async"
+                                data-nimg="1"
+                                class="object-cover block"
+                                sizes="(max-width: 768px) 55px, 63px"
+                                src="./public/office-building.svg"
+                                style="color: transparent; max-width: 100%; height: auto;"
+                            />
+                        </div>
+                        <h6 class="capitalize font-supera600 text-[#326555] leading-tight lg:leading-snug text-md sm:text-xl 2xl:text-2xl">
+                            Why <br />
+                            Mohali.
+                        </h6>
+                        <p id="location-p1" class="tracking-wider capitalize text-[#646363] font-supera600 text-[11px] md:text-[14px] xl:text-sm 2xl:text-base text-clap-6 transition-all">
+                          Reach your tranquil retreat
+                          at Nestling Woods with a 
+                          convenient drive from 
+                          Chandigarh and 
+                          Zirakpur.
+                        </p>
+                      </div>
+                      <!-- <div id="location-p1-btn" class="border border-[#7A7A7A] rounded-sm flex w-[70%] md:w-[48%] items-center justify-between px-2 py-1 cursor-pointer mt-3">
+                          <button class="text-[12px] md:text-sm capitalize font-supera500 whitespace-nowrap text-[#4B4B4B]">Read More</button>
+                          <img src="./public/down_gray.svg" width="20px"/>
+                      </div> -->
+                    </div>
+                    <div class="shadow-[0px_-1.01px_4.04px_0px_rgba(0,0,0,0.25)] md:shadow-none rounded-2xl md:rounded-none  md:p-0 md:py-0 md:pl-8 p-2 py-4">
+                    <div class="md:border-r-2 border-[#BFBDAC] flex flex-col gap-y-2 lg:gap-y-3 pr-0 md:pr-8">
+                        <div class="relative w-[50px] h-[50px] xs:w-[55px] xs:h-[55px] md:w-[63px] md:h-[63px]">
+                            <img
+                                alt="Descriptive alt text"
+                                loading="lazy"
+                                width="100"
+                                height="100"
+                                decoding="async"
+                                data-nimg="1"
+                                class="object-cover block"
+                                sizes="(max-width: 768px) 55px, 63px"
+                                src="./public/destination.svg"
+                                style="color: transparent; max-width: 100%; height: auto;"
+                            />
+                        </div>
+                        <h6 class="capitalize font-supera600 text-[#326555] leading-tight lg:leading-snug text-md sm:text-xl 2xl:text-2xl">
+                            Stay <br />
+                            Connected.
+                        </h6>
+                        <p id="location-p2" class="tracking-wider capitalize text-[#646363] font-supera600 text-[11px] md:text-[14px] xl:text-sm 2xl:text-base text-clap-6">
+                          Kasauli offers a stable real 
+                          estate market. Invest in lasting
+                          value at Nestling Woods.
+                        </p>
+                      </div>
+                        <!-- <div id="location-p2-btn" class="border border-[#7A7A7A] rounded-sm flex w-[70%] md:w-[55%] items-center justify-between px-2 py-1 cursor-pointer mt-3">
+                          <button class="text-[12px] md:text-sm capitalize font-supera500 whitespace-nowrap text-[#4B4B4B]">Read More</button>
+                          <img src="./public/down_gray.svg" width="20px" class="transition-all"/>
+                        </div> -->
+                    </div>
+                    <div class="shadow-[0px_-1.01px_4.04px_0px_rgba(0,0,0,0.25)] md:shadow-none rounded-2xl md:rounded-none   md:p-0 md:py-0 md:pl-8 p-2 py-4">
+                    <div class="md:border-r-2 border-[#BFBDAC]  flex flex-col gap-y-2 lg:gap-y-3 pr-0 md:pr-8">
+                        <div class="relative w-[50px] h-[50px] xs:w-[55px] xs:h-[55px] md:w-[63px] md:h-[63px]">
+                            <img
+                                alt="Descriptive alt text"
+                                loading="lazy"
+                                width="100"
+                                height="100"
+                                decoding="async"
+                                data-nimg="1"
+                                class="object-cover block"
+                                sizes="(max-width: 768px) 55px, 63px"
+                                src="./public/construction-site.svg"
+                                style="color: transparent; max-width: 100%; height: auto;"
+                            />
+                        </div>
+                        <h6 class="capitalize font-supera600 text-[#326555] leading-tight lg:leading-snug text-md sm:text-xl 2xl:text-2xl">
+                            Great <br />
+                            Infrastructure.
+                        </h6>
+                        <p id="location-p3" class="tracking-wider capitalize text-[#646363] font-supera600 text-[11px] md:text-[14px] xl:text-sm 2xl:text-base text-clap-6">
+                          Experience a healthier and
+                          relaxed lifestyle in Kasauli's 
+                          pristine environment at 
+                          Nestling Woods
+                        </p>
+                      </div>
+                        <!-- <div id="location-p3-btn" class="border border-[#7A7A7A] rounded-sm flex w-[70%] md:w-[55%] items-center justify-between px-2 py-1 cursor-pointer mt-3">
+                          <button class="text-[12px] md:text-sm capitalize font-supera500 whitespace-nowrap text-[#4B4B4B]">Read More</button>
+                          <img src="./public/down_gray.svg" width="20px"/>
+                        </div> -->
+                      
+                    </div>
+                    <div class="shadow-[0px_-1.01px_4.04px_0px_rgba(0,0,0,0.25)] md:shadow-none rounded-2xl md:rounded-none   md:p-0 md:py-0 md:pl-8 p-2 py-4">
+                    <div class="flex flex-col gap-y-2 lg:gap-y-3">
+                        <div class="relative w-[50px] h-[50px] xs:w-[55px] xs:h-[55px] md:w-[63px] md:h-[63px]">
+                            <img
+                                alt="Descriptive alt text"
+                                loading="lazy"
+                                width="100"
+                                height="100"
+                                decoding="async"
+                                data-nimg="1"
+                                class="object-cover block"
+                                sizes="(max-width: 768px) 55px, 63px"
+                                src="./public/profit.svg"
+                                style="color: transparent; max-width: 100%; height: auto;"
+                            />
+                        </div>
+                        <h6 class="capitalize font-supera600 text-[#326555] leading-tight lg:leading-snug text-md sm:text-xl 2xl:text-2xl">
+                            Best Investment <br />
+                            Opportunities.
+                        </h6>
+                        <p id="location-p4" class="tracking-wider capitalize text-[#646363] font-supera600 text-[11px] md:text-[14px] xl:text-sm 2xl:text-base text-clap-6">
+                          Nestling Woods is the ideal 
+                          destination for quick and 
+                          rejuvenating breaks in 
+                          Kasauli.
+                        </p>
+                      </div>
+                        <!-- <div id="location-p4-btn" class="border border-[#7A7A7A] rounded-sm flex w-[70%] md:w-[55%] items-center justify-between px-2 py-1 cursor-pointer mt-3">
+                          <button class="text-[12px] md:text-sm capitalize font-supera500 whitespace-nowrap text-[#4B4B4B]">Read More</button>
+                          <img src="./public/down_gray.svg" width="20px"/>
+                        </div> -->
+                    
+                  </div>
+                </div>
+            </div>
+        </section>
+        <section id="nearby" class="mt-5 nearby-section section-gap-inner scroll-mt-20 bg-theme md:bg-[#fff]">
+            <div class="2xl:container mx-auto">
+                <div>
+                    <h2 class="px-3 font-supera700 leading-tight text-[27px] md:text-[32px] text-center text-white md:text-[#32644D] uppercase"><span class="font-supera600">Nearby,</span> <span class="font-supera700">Nestling Woods </span></h2>
+                    <p
+                    class="font-supera600 capitalize md:mt-1.5 max-w-full tracking-wider sm:tracking-normal text-[13px] xs:text-sm sm:text-[15px] md:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] md:leading-[22px] text-center text-[#fff] mt-3">
+                    View Our Location: Nestling Woods on the Map
+                  </p>
+                </div>
+                <div class="my-[20px] 3xl:my-[25px] px-5 relative">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="cursor-pointer relative z-10 overflow-hidden">
+                                    <div class="group w-full h-[250px] lg:h-[300px] relative overflow-hidden">
+                                        <img
+                                            alt="nearby Amity university"
+                                            loading="lazy"
+                                            decoding="async"
+                                            data-nimg="fill"
+                                            class="object-cover duration-300"
+                                            sizes="100vw"
+                                            src="./public/amenities-img3.webp"
+                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                                        />
+                                        <div class="distance-overlay">
+                                          <h6 class="font-supera700 text-[74px] leading-[1] text-white text-center">
+                                              1.2 <br />
+                                              <span class="text-[47px]">KM</span>
+                                          </h6>
+                                      </div>
+                                    </div>
+                                    <div class="py-4"><h4 class="capitalize font-supera700 text-[18px] text-white md:text-[#6D6868] text-center">Amity university</h4></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cursor-pointer relative z-10 overflow-hidden">
+                                    <div class="group w-full h-[250px] lg:h-[300px] relative overflow-hidden">
+                                        <img
+                                            alt="nearby Indian School of Business"
+                                            loading="lazy"
+                                            decoding="async"
+                                            data-nimg="fill"
+                                            class="object-cover duration-300"
+                                            sizes="100vw"
+                                            src="./public/amenities-img3.webp"
+                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                                        />
+                                        <div class="distance-overlay">
+                                          <h6 class="font-supera700 text-[74px] leading-[1] text-white text-center">
+                                                1.5 <br />
+                                                <span class="text-[47px]">KM</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="py-4"><h4 class="capitalize font-supera700 text-[18px] text-white md:text-[#6D6868] text-center">Indian School of Business</h4></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cursor-pointer relative z-10 overflow-hidden">
+                                    <div class="group w-full h-[250px] lg:h-[300px] relative overflow-hidden">
+                                        <img
+                                            alt="nearby PCA Stadium Mohali"
+                                            loading="lazy"
+                                            decoding="async"
+                                            data-nimg="fill"
+                                            class="object-cover duration-300"
+                                            sizes="100vw"
+                                            src="./public/amenities-img3.webp"
+                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                                        />
+                                        <div class="distance-overlay">
+                                          <h6 class="font-supera700 text-[74px] leading-[1] text-white text-center">
+                                                2.5 <br />
+                                                <span class="text-[47px]">KM</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="py-4"><h4 class="capitalize font-supera700 text-[18px] text-white md:text-[#6D6868] text-center">PCA Stadium Mohali</h4></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <div class="cursor-pointer relative z-10 overflow-hidden">
+                                    <div class="group w-full h-[250px] lg:h-[300px] relative overflow-hidden">
+                                        <img
+                                            alt="nearby Railway Station Mohali"
+                                            loading="lazy"
+                                            decoding="async"
+                                            data-nimg="fill"
+                                            class="object-cover duration-300"
+                                            sizes="100vw"
+                                            src="./public/amenities-img3.webp"
+                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                                        />
+                                        <div class="distance-overlay">
+                                          <h6 class="font-supera700 text-[74px] leading-[1] text-white text-center">
+                                                2.5 <br />
+                                                <span class="text-[47px]">KM</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="py-4"><h4 class="capitalize font-supera700 text-[18px] text-white md:text-[#6D6868] text-center">Railway Station Mohali</h4></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <div class="cursor-pointer relative z-10 overflow-hidden">
+                                    <div class="group w-full h-[250px] lg:h-[300px] relative overflow-hidden">
+                                        <img
+                                            alt="nearby Mohali Golf Range"
+                                            loading="lazy"
+                                            decoding="async"
+                                            data-nimg="fill"
+                                            class="object-cover duration-300"
+                                            sizes="100vw"
+                                            src="./public/amenities-img3.webp"
+                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                                        />
+                                        <div class="distance-overlay">
+                                          <h6 class="font-supera700 text-[74px] leading-[1] text-white text-center">
+                                                3.1 <br />
+                                                <span class="text-[47px]">KM</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="py-4"><h4 class="capitalize font-supera700 text-[18px] text-white md:text-[#6D6868] text-center">Mohali Golf Range</h4></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <div class="cursor-pointer relative z-10 overflow-hidden">
+                                    <div class="group w-full h-[250px] lg:h-[300px] relative overflow-hidden">
+                                        <img
+                                            alt="nearby Fortis Hospital"
+                                            loading="lazy"
+                                            decoding="async"
+                                            data-nimg="fill"
+                                            class="object-cover duration-300"
+                                            sizes="100vw"
+                                            src="./public/amenities-img3.webp"
+                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                                        />
+                                        <div class="distance-overlay">
+                                          <h6 class="font-supera700 text-[74px] leading-[1] text-white text-center">
+                                                3.3 <br />
+                                                <span class="text-[47px]">KM</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="py-4"><h4 class="capitalize font-supera700 text-[18px] text-white md:text-[#6D6868] text-center">Fortis Hospital</h4></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <div class="cursor-pointer relative z-10 overflow-hidden">
+                                    <div class="group w-full h-[250px] lg:h-[300px] relative overflow-hidden">
+                                        <img
+                                            alt="nearby Infosys"
+                                            loading="lazy"
+                                            decoding="async"
+                                            data-nimg="fill"
+                                            class="object-cover duration-300"
+                                            sizes="100vw"
+                                            src="./public/amenities-img3.webp"
+                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                                        />
+                                        <div class="distance-overlay">
+                                          <h6 class="font-supera700 text-[74px] leading-[1] text-white text-center">
+                                                4.3 <br />
+                                                <span class="text-[47px]">KM</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="py-4"><h4 class="capitalize font-supera700 text-[18px] text-white md:text-[#6D6868] text-center">Infosys</h4></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <div class="cursor-pointer relative z-10 overflow-hidden">
+                                    <div class="group w-full h-[250px] lg:h-[300px] relative overflow-hidden">
+                                        <img
+                                            alt="nearby Airocity"
+                                            loading="lazy"
+                                            decoding="async"
+                                            data-nimg="fill"
+                                            class="object-cover duration-300"
+                                            sizes="100vw"
+                                            src="./public/amenities-img3.webp"
+                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                                        />
+                                        <div class="distance-overlay">
+                                          <h6 class="font-supera700 text-[74px] leading-[1] text-white text-center">
+                                                05 <br />
+                                                <span class="text-[47px]">KM</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="py-4"><h4 class="capitalize font-supera700 text-[18px] text-white md:text-[#6D6868] text-center">Airocity</h4></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <div class="cursor-pointer relative z-10 overflow-hidden">
+                                    <div class="group w-full h-[250px] lg:h-[300px] relative overflow-hidden">
+                                        <img
+                                            alt="nearby Manav Rachna International School"
+                                            loading="lazy"
+                                            decoding="async"
+                                            data-nimg="fill"
+                                            class="object-cover duration-300"
+                                            sizes="100vw"
+                                            src="./public/amenities-img3.webp"
+                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                                        />
+                                        <div class="distance-overlay">
+                                          <h6 class="font-supera700 text-[74px] leading-[1] text-white text-center">
+                                                05 <br />
+                                                <span class="text-[47px]">KM</span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="py-4"><h4 class="capitalize font-supera700 text-[18px] text-white md:text-[#6D6868] text-center">Manav Rachna International School</h4></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
-
-
-    <div id="sample-flat" class="hidden">
-        <div class="px-5 sm:px-5 mt-[60px] mb-[20px] beforeMDinvisible xl:container mx-auto">
-            <h2 class="undefined uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-[#32644D]" >Sample Flat</h2>
-            <p
-                class="font-supera600 capitalize cmd:mt-1.5 max-w-full tracking-wide sm:tracking-normal text-[13px] cxs:text-sm sm:text-[15px] md:text-[16px] cmd:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#5A5454]"
-                style="color: rgb(90, 84, 84);"
-            >
-                Explore The medallion Aurum mohali Project gallery &amp; Construction Updates.
-            </p>
-        </div>
-        <section id="sample-flat-img" class="beforeMDinvisible block w-full mt-7 md:mt-10">
-            <div class="w-[95%] md:w-[88%] 3xl:container lg:mx-auto mx-auto grid grid-cols-12 gap-3">
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery4.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery4.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery4.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery4.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery4.png""
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery4.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery4.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery4.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery4.png"                 
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery4.png"                 
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
+        <section>
+            <div class="px-5 sm:px-5 mb-[20px] xl:container mx-auto">
+                <h2 class="font-supera600 uppercase font-supera700 text-[24px] sm:text-[32px] md:text-[36px] text-center text-[#32644D]">Location map</h2>
+                <p
+                    class="font-supera600 capitalize md:mt-1.5 max-w-full tracking-wide sm:tracking-normal text-[13px] xs:text-sm sm:text-[15px] md:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] md:leading-[22px] text-center text-[#5A5454]"
+                >
+                View Our Location: Nestling Woods on the Map
+                </p>
             </div>
-        </section>     
-    </div>
-                 
-    <div id="project-gallery" class="hidden">
-        <div class="px-5 sm:px-5 mt-[60px] mb-[20px] beforeMDinvisible xl:container mx-auto">
-            <h2 class="uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-[#32644D]" >Project Gallery</h2>
-            <p
-                class="font-supera600 capitalize cmd:mt-1.5 max-w-full tracking-wide sm:tracking-normal text-[13px] cxs:text-sm sm:text-[15px] md:text-[16px] cmd:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#5A5454]"
-                style="color: rgb(90, 84, 84);"
-            >
-                Explore The medallion Aurum mohali Project gallery &amp; Construction Updates.
-            </p>
-        </div>
-        <section id="project-gallery-img" class="beforeMDinvisible block w-full mt-7 md:mt-10">
-            <div class="w-[95%] md:w-[88%] 3xl:container lg:mx-auto mx-auto grid grid-cols-12 gap-3">
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery1.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
+            <div class="flex flex-col md:flex-row w-full h-[90vh]">
+                <div class="w-full md:w-[65%] h-[80%] md:h-full mx-auto">
+                    <section id="map" class="w-full h-full scroll-mt-24 overflow-hidden">
+                        <div class="relative w-full h-full">
+                            <div class="relative w-full h-full overflow-hidden">
+                                <img
+                                    alt="Tab content"
+                                    loading="eager"
+                                    decoding="async"
+                                    data-nimg="fill"
+                                    class="object-[25%_50%] w-full h-full object-cover"
+                                    sizes="100vw"
+                                    src="./public/image-map.webp"
+                                    style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                                />
+                            </div>
+                            <div class="w-full absolute top-0 left-1/2 transform -translate-x-1/2 rounded-tl-none rounded-tr-none rounded-bl-lg rounded-br-lg flex justify-center overflow-hidden" style="z-index: 500;">
+                                <button
+                                    aria-label="Tab Map"
+                                    class="outline-none py-2 px-5 lg:px-10 font-supera600 text-theme bg-white rounded-bl-2xl sm:rounded-bl-3xl text-sm lg:text-lg tracking-wide"
+                                >
+                                    Map
+                                </button>
+                                <button aria-label="Tab Google Map" class="outline-none py-2 px-5 lg:px-10 font-supera600 bg-theme text-white rounded-br-2xl sm:rounded-br-3xl text-sm lg:text-lg tracking-wide">
+                                    Google Map
+                                </button>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery1.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery1.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery1.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery1.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery1.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery1.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery1.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery1.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 sm:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="./public/gallery1.png"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-            </div>
-        </section>
-    </div>
-
-
-      <div id="construction-updates" class="hidden">
-        <div class="px-5 md:px-5 mt-[60px] mb-[20px] beforeMDinvisible lg:container mx-auto">
-          <h2 class="undefined uppercase font-supera700 text-[24px] md:text-[36px] text-center text-[#32644D]" >Construction Updates</h2>
-          <p
-              class="font-supera600 capitalize md:mt-1.5 max-w-full tracking-wide sm:tracking-normal text-[13px] md:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#5A5454]"
-              style="color: rgb(90, 84, 84);"
-          >
-              Explore The medallion Aurum mohali Project gallery &amp; Construction Updates.
-          </p>
-        </div>
-        <section id="construction-updates-img" class="beforeMDinvisible block w-full mt-7 md:mt-10">
-            <div class="w-[95%] md:w-[88%] 3xl:container lg:mx-auto mx-auto grid grid-cols-12 gap-3">
-                <div class="col-span-12 xs:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="/public/amenities-img3.webp"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 xs:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="/public/amenities-img3.webp"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 xs:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="/public/amenities-img3.webp"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 md:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="/public/amenities-img3.webp"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 md:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="/public/amenities-img3.webp"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 xs:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="/public/amenities-img3.webp"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 xs:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="/public/amenities-img3.webp"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 xs:col-span-6 md:col-span-4 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="/public/amenities-img3.webp"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 md:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="/public/amenities-img3.webp"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
-                </div>
-                <div class="col-span-12 md:col-span-6 h-[200px] lg:h-[250px] xl:h-[300px] w-full overflow-hidden relative">
-                    <img
-                        alt="Image"
-                        loading="lazy"
-                        decoding="async"
-                        data-nimg="fill"
-                        class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                        sizes="100vw"
-                        src="/public/amenities-img3.webp"
-                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                    />
+                <div class="w-full md:w-[35%] h-1/2 md:h-full -mt-0.5 md:mt-0">
+                    <div class="w-full h-full">
+                        <div class="w-full h-full overflow-hidden relative col-span-12">
+                            <div class="relative w-full h-full">
+                                <video src="./public/Location-video.mp4" loop="" autoplay="" muted playsinline="" class="w-full h-full object-cover pointer-events-none" __idm_id__="57351">Your browser does not support the video tag.</video>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
       </div>
-
-
-      <section class="afterMDinvisible">
-          <div class="px-5 sm:px-5 mt-[100px] mb-[20px] afterMDinvisible xl:container mx-auto">
-              <h2 class="undefined uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-[#32644D]" >Gallery</h2>
-              <p
-                  class="font-supera600 capitalize cmd:mt-1.5 max-w-full tracking-wide sm:tracking-normal text-[13px] cxs:text-sm sm:text-[15px] md:text-[16px] cmd:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#5A5454]"
-                  style="color: rgb(90, 84, 84);"
-              >
-                Explore The medallion floor plans, Site plan & Tower plans
-              </p>
-          </div>
-          <div class="relative w-full mb-1 flex items-center transition-all duration-300">
-            <div class="relative">
-                <svg class="w-[300px] bxxs:w-auto bxxs:h-[40px] xs:h-[40px] object-fill" viewBox="0 0 500 55" fill="#000" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H500L450 55H0V0Z" fill="#326555"></path>
-                    <path d="M0 0H479.167L431.25 55H0V0Z" fill="#326555"></path>
-                    <path d="M0 0H460.069L414.062 55H0V0Z" fill="#326555"></path>
-                </svg>
-                <h4 class="w-full h-full absolute top-0 tracking-wider font-supera600 text-base xs:text-lg capitalize text-[#fff] flex justify-left items-center pl-[10%]">Project Walk Through</h4>
-            </div>
-        </div>
-        
-          <div class="mt-5 mx-4 h-auto">
-              <div class="col-span-12">
-                  <div class="relative w-full h-full">
-                      <video src="./public/Location-video.mp4" poster="./public/amenities-img3.webp" loop="" playsinline="" muted controls="" class="w-full h-full object-cover" __idm_id__="17145860">
-                          Your browser does not support the video tag.
-                      </video>
-                  </div>
-              </div>
-          </div>
-          <div class="sticky top-0 pt-2 pb-4 mt-4 bg-white text-center shadow-md transition-all duration-300 ease-in-out" style="z-index: 600;">
-            <div id="gallery-tab" class="flex flex-col items-start tracking-wide max-w-[350px] bxxs:max-w-[280px] xs:max-w-[300px] cxs:max-w-[400px] sm:max-w-[400px]">
-                <div id="sample-flat-mob-btn" data-target="sample-flat-mob" class="relative w-full mb-1 flex items-center transition-all duration-300 bg-gallery-mob ">
-                    <div class="relative w-[250px] h-[40px] object-fill px-2 py-1 ">
-                        <h4 class="w-full h-full tracking-wider font-supera600 text-base xs:text-lg capitalize text-white flex justify-left items-center pl-[10%]">Sample Flat</h4>
-                    </div>
-                </div>
-                <div id="project-gallery-mob-btn" data-target="project-gallery-mob" class="relative w-full mb-1 flex items-center transition-all bg-gallery-mob-black  duration-300">
-                    <div class="relative w-[300px] h-[40px] object-fill px-2 py-1  bg-cover">
-                        <h4 class="w-full h-full tracking-wider font-supera600 text-base xs:text-lg capitalize text-white flex justify-left items-center pl-[10%] whitespace-nowrap ">Project Gallery</h4>
-                    </div>
-                </div>
-                <div id="construction-updates-mob-btn" data-target="construction-updates-mob" class="relative w-full mb-1 flex items-center bg-gallery-mob-black  transition-all duration-300">
-                    <div class="relative w-full h-[40px] object-fill px-2 py-1 ">
-                        <h4 class="w-full h-full tracking-wider font-supera600 text-base xs:text-lg capitalize text-white flex justify-left items-center pl-[10%] whitespace-nowrap">Construction Updates</h4>
-                    </div>
-                </div>
-            </div>
-          </div>
-          <div class="mx-2 grid grid-cols-1 gap-3">
-              
-              <!-- <div class="project-walk-through-mob">
-                  <div class="grid grid-cols-1 cxs:grid-cols-2 gap-3"></div>
-              </div> -->
-              
-              <div  id="sample-flat-mob">
-                <div class="px-5 sm:px-5 mt-[60px] mb-[20px] afterMDinvisible xl:container mx-auto">
-                  <h2 class="undefined uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-[#32644D]" >Sample Flat</h2>
-                  <p
-                      class="font-supera600 capitalize cmd:mt-1.5 max-w-full tracking-wide sm:tracking-normal text-[13px] cxs:text-sm sm:text-[15px] md:text-[16px] cmd:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#5A5454]"
-                      style="color: rgb(90, 84, 84);"
-                  >
-                      Explore The medallion Aurum mohali Project gallery &amp; Construction Updates.
-                  </p>
-                </div>
-                <div>
-                    <div class="grid grid-cols-1 xs:grid-cols-2 gap-3">
-                        <div class="h-[200px] lg:h-[300px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery4.png" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                        </div>
-                        <div class="grid grid-cols-2 gap-2">
-                          <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery4.png"              style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                          </div>
-                          <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                              <img
-                                  alt="Image"
-                                  loading="lazy"
-                                  decoding="async"
-                                  data-nimg="fill"
-                                  class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                  sizes="100vw"
-                                  src="./public/gallery4.png"                 style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                              />
-                          </div>
-                          <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery4.png"                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                          </div>
-                          <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery4.png""
-                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                          </div>
-                          <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery4.png"                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                          </div>
-                          <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                              <img
-                                  alt="Image"
-                                  loading="lazy"
-                                  decoding="async"
-                                  data-nimg="fill"
-                                  class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                  sizes="100vw"
-                                  src="./public/gallery4.png"                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                              />
-                          </div>
-                        </div>
-                        
-                        
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery4.png"                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                        </div>
-                        <div class="grid grid-cols-2 gap-2">
-                          <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery4.png"                 style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery1.png"
-                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                        </div>
-                        </div>
-                    </div>
-
-                </div>
-              </div>
-              <div id="project-gallery-mob" class="hidden">
-                <div class="px-5 sm:px-5 mt-[60px] mb-[20px] afterMDinvisible xl:container mx-auto">
-                  <h2 class="uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-[#32644D]" >Project Gallery</h2>
-                  <p
-                      class="font-supera600 capitalize cmd:mt-1.5 max-w-full tracking-wide sm:tracking-normal text-[13px] cxs:text-sm sm:text-[15px] md:text-[16px] cmd:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#5A5454]"
-                      style="color: rgb(90, 84, 84);"
-                  >
-                      Explore The medallion Aurum mohali Project gallery &amp; Construction Updates.
-                  </p>
-                </div>
-                <div>
-                  <div class="grid grid-cols-1 xs:grid-cols-2 gap-3">
-                      <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery5.png" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                      </div>
-                      <div class="grid grid-cols-2 gap-2">
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery5.png"              style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery5.png"                 style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery5.png"                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery5.png""
-                              style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery5.png"                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery5.png"                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                        </div>
-                      </div>
-                      
-                      
-                      <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery5.png"                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                      </div>
-                      <div class="grid grid-cols-2 gap-2">
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery5.png"                 style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                      </div>
-                      <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery1.png"
-                              style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                      </div>
-                      </div>
-                  </div>
-              </div>
-              </div>
-              <div id="construction-updates-mob" class="hidden">
-                <div class="px-5 md:px-5 mt-[60px] mb-[20px] afterMDinvisible lg:container mx-auto">
-                  <h2 class="undefined uppercase font-supera700 text-[24px] md:text-[36px] text-center text-[#32644D]" >Construction Updates</h2>
-                  <p
-                      class="font-supera600 capitalize md:mt-1.5 max-w-full tracking-wide sm:tracking-normal text-[13px] md:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#5A5454]"
-                      style="color: rgb(90, 84, 84);"
-                  >
-                      Explore The medallion Aurum mohali Project gallery &amp; Construction Updates.
-                  </p>
-                </div>
-                <div>
-                  <div class="grid grid-cols-1 xs:grid-cols-2 gap-3">
-                      <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery7.png" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                      </div>
-                      <div class="grid grid-cols-2 gap-2">
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery7.png"              style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery7.png"                 style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery7.png"                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery7.png""
-                              style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery7.png"                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                        </div>
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                            <img
-                                alt="Image"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                                sizes="100vw"
-                                src="./public/gallery7.png"                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                            />
-                        </div>
-                      </div>
-                      
-                      
-                      <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery7.png"                      style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                      </div>
-                      <div class="grid grid-cols-2 gap-2">
-                        <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery7.png"                 style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                      </div>
-                      <div class="h-[200px] lg:h-[250px] xl:h-[300px] relative overflow-hidden">
-                          <img
-                              alt="Image"
-                              loading="lazy"
-                              decoding="async"
-                              data-nimg="fill"
-                              class="object-cover hover:scale-125 overflow-hidden duration-1000 cursor-pointer open-lightbox"
-                              sizes="100vw"
-                              src="./public/gallery7.png"
-                              style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                          />
-                      </div>
-                      </div>
-                  </div>
-              </div>
-              </div>
-          </div>
-      </section>
-
-      </div>
+    
+    </div>
   
 
      <!-- Are you interested in this Property? section-->
@@ -1843,7 +1347,7 @@
                     </div>
                 </div>
                 
-                     <form action="#" class="h-full pr-2 ">
+                    <form action="#" class="h-full pr-2 ">
                         <div class="w-full h-full flex flex-col justify-between md:justify-center lg:justify-start gap-y-3 lg:gap-y-5">
                             <div class="flex flex-col max-w-full md:max-w-[405px]">
                                 <div class="mt-1 md:mt-2 pr-2 pt-2.5 text-[#514E4E] bg-transparent border-b-[0.5px] border-[#AFAFAF] font-supera500 text-[15px] lg:text-[16px] overflow-hidden">
@@ -2225,7 +1729,7 @@
       </div>
     </div>
 
-     <!-- download brochure section -->
+    <!-- download brochure section -->
     <section
      id="download"
      class="section-gap scroll-mt-24 h-[450px] xs:h-[500px] cxs:h-[550px] md:h-[610px] lg:h-auto my-[60px]"
@@ -2573,141 +2077,6 @@
          </div>
        </div>
      </div>
-    </div>
-
-    <!-- need immediate assistance -->
-    <div>
-      <div class="w-screen h-full relative">
-          <div class="fixed bottom-20 sm:bottom-5 md:bottom-10 right-2 md:right-10 z-50">
-              <div class="relative flex flex-col justify-center items-center">
-
-                  <!-- close button for main div-->
-                  <div id="closeMainImmAssisst" class="opacity-100 bg-[#ffffffcb] absolute bottom-[100%] right-0 z-50 cursor-pointer size-[25px] border-[0.0001px] border-gray-400 rounded-full flex justify-center items-center p-1">
-                      <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15" class="text-gray-500 relative z-50 text-4xl font-thin" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z"
-                              fill="currentColor"
-                          ></path>
-                      </svg>
-                  </div>
-                                  
-                  <h6 id="h6MainImmAssisst" class="capitalize scrollingText opacity-100 duration-500 pb-3.5 max-w-[150px] text-[14px] text-[#474747] font-supera800 text-center">Need immediate assistance?</h6>
-
-                  <!-- main div with wave animation -->
-                  <div id="MainImmAssisstDiv" class="opacity-100 duration-500 call-animation relative z-50 cursor-pointer size-[65px] rounded-full" style="opacity: 1; transform: none;">
-                      <img
-                          alt="agent-img"
-                          loading="lazy"
-                          width="60"
-                          height="61"
-                          decoding="async"
-                          data-nimg="1"
-                          class="relative z-50 w-full h-full cursor-pointer"
-                          style="color: transparent;"
-                          src="./public/user.png"
-                      />
-                      <div class="wave-container absolute inset-0 flex justify-center items-center cursor-pointer">
-                          <div class="circle h-[60px] w-[60px] bg-[#a4591a] delay1"></div>
-                          <div class="circle h-[60px] w-[60px] bg-[#a4591a] delay2"></div>
-                          <div class="circle h-[60px] w-[60px] bg-[#a4591a] delay3"></div>
-                          <div class="circle h-[60px] w-[60px] bg-[#a4591a] delay4"></div>
-                      </div>
-                  </div>
-
-                  <!-- name of assisstant -->
-                  <div id="AssisstantNameDiv" class="mt-3 opacity-100 duration-500">
-                      <strong class="font-supera700 text-[10px] text-center capitalize text-[#000]">Pawan Kumar</strong>
-                      <p class="font-supera500 text-[8px] text-center text-[#7E7E7E] capitalize">Realty Nivesh</p>
-                  </div>
-
-                  <!-- below div will be shown when clicked on the main div -->
-                  <div id="megaMainImmAssisst" class="w-[0px] opacity-0 whitespace-nowrap duration-500 shadow-lg absolute bottom-[90%] -right-[0px] xs:right-8 z-50 bg-white rounded-xl overflow-hidden" >
-                    
-                    <!-- class="opacity-100 w-[300px] xs:w-[353px]" -->
-                    
-                    <div class="w-full h-full relative after:absolute after:w-[60%] after:h-[4px] after:bottom-0 after:left-[50%] after:translate-x-[-50%] after:rounded-t-2xl after:bg-[#000]">
-                          <!-- this is close btn it will close the mega main, and display the main -->
-                          <div id="closeMegaMainBtnImmAssisst" class="cursor-pointer text-[#131313dd] text-[25px] font-supera700 absolute top-2 right-2 z-40">
-                              <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                      fill-rule="evenodd"
-                                      clip-rule="evenodd"
-                                      d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
-                                      fill="currentColor"
-                                  ></path>
-                              </svg>
-                          </div>
-                          <div class="py-4 px-3 xs:px-[37px] relative flex flex-col gap-6">
-                              <h5 class="text-[16px] text-center text-[#535353] font-supera800 capitalize">Need immediate assistance?</h5>
-                              <div class="flex">
-                                  <div class="relative z-50 cursor-auto size-[65px] rounded-full">
-                                      <img
-                                          alt="agent-img"
-                                          loading="lazy"
-                                          width="60"
-                                          height="61"
-                                          decoding="async"
-                                          data-nimg="1"
-                                          class="relative z-50 w-full h-full"
-                                          style="color: transparent;"
-                                          src="./public/user.png"
-                                      />
-                                  </div>
-                                  <div class="ml-4">
-                                      <strong class="font-supera800 text-[15px] text-center capitalize text-[#000]">Pawan Kumar</strong>
-                                      <p class="font-supera500 text-[10px] text-[#4c4c4c] capitalize">Realty Nivesh</p>
-                                  </div>
-                              </div>
-                              <div class="cursor-pointer w-full rounded-md overflow-hidden">
-                                  <button aria-label="contact now" class="w-full py-[7px] tracking-wider bg-backgroud-theme-local bg-cover bg-right-bottom text-[13px] font-supera700 text-white uppercase cursor-pointer">Contact Now</button>
-                              </div>
-                              <div class="w-full flex justify-between gap-x-[10px] pt-1 pb-3">
-                                  <a href="tel:+91 99880 10405"" aria-label="call now" class="cursor-pointer flex items-center pl-[10px] w-1/2 border-[1.5px] border-[#000] rounded-lg py-1.5">
-                                      <span>
-                                          <svg width="17" height="15" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <path
-                                                  d="M1.64952 0.980195H3.39685L3.95996 2.38503L3.05516 2.98688C3.00188 3.02235 2.9582 3.0704 2.92799 3.12675C2.89778 3.18311 2.88198 3.24603 2.88199 3.30994V3.31848C2.88222 3.33585 2.883 3.3532 2.88432 3.37051C2.88666 3.40235 2.89055 3.44545 2.89794 3.49865C2.91312 3.60349 2.94231 3.74793 2.99912 3.918C3.11354 4.2597 3.33769 4.70196 3.77433 5.13762C4.21097 5.57329 4.65422 5.79694 4.99629 5.9111C5.16713 5.96779 5.31151 5.99652 5.41736 6.01206C5.47711 6.02038 5.53725 6.02556 5.59754 6.02759L5.6026 6.02798H5.60572C5.67797 6.02794 5.74917 6.00783 5.81062 5.96991C5.87207 5.93198 5.92172 5.87774 5.95401 5.81325L6.21475 5.29294L7.94106 5.58028V7.25769C7.11955 7.37612 4.90056 7.493 3.15712 5.75345C1.41369 4.01391 1.53043 1.79949 1.64952 0.980195ZM3.68871 3.49865L4.39193 3.03115C4.54049 2.93228 4.65045 2.78544 4.70338 2.61527C4.75631 2.4451 4.74898 2.26195 4.68263 2.09653L4.11952 0.691695C4.06173 0.547602 3.962 0.424091 3.83319 0.337093C3.70437 0.250095 3.55239 0.203603 3.39685 0.203613H1.62928C1.27553 0.203613 0.942803 0.448625 0.884818 0.83148C0.752504 1.70203 0.573101 4.27329 2.60685 6.3025C4.6406 8.33171 7.21762 8.15232 8.09011 8.02068C8.47382 7.96244 8.71938 7.63084 8.71938 7.27788V5.58028C8.71941 5.39644 8.65407 5.21857 8.53499 5.07828C8.41592 4.938 8.25083 4.84442 8.0691 4.81418L6.34278 4.52723C6.1786 4.49989 6.00995 4.52578 5.8616 4.60112C5.71325 4.67646 5.59301 4.79727 5.51854 4.94581L5.3839 5.21489C5.33628 5.2032 5.28915 5.18959 5.24263 5.17412C5.00135 5.09414 4.66628 4.9295 4.3246 4.58858C3.98292 4.24766 3.81792 3.91334 3.73775 3.67221C3.71861 3.61522 3.70198 3.55729 3.68871 3.49865Z"
-                                                  fill="#000"
-                                              ></path>
-                                          </svg>
-                                      </span>
-                                      <h6 class="pl-1.5 text-[11.5px] text-[#5f5f5f] tracking-wide font-supera700 cursor-pointer">Call Now</h6>
-                                  </a>
-                                  <a href="https://wa.me/7009247378" target="_blank" class="cursor-pointer flex items-center pl-[10px] w-1/2 border-[1.5px] border-[#000] rounded-lg py-1.5">
-                                      <span>
-                                          <svg width="19" height="19.3" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <path
-                                                  d="M8.56823 2.42157C8.10612 1.95582 7.55568 1.58653 6.94902 1.33526C6.34237 1.08399 5.69164 0.955755 5.0348 0.958038C2.28264 0.958038 0.0395922 3.19608 0.0395922 5.94209C0.0395922 6.82222 0.271458 7.6772 0.704947 8.4316L-0.000732422 11.0167L2.64557 10.3226C3.37645 10.7199 4.19806 10.9312 5.0348 10.9312C7.78695 10.9312 10.03 8.69312 10.03 5.94712C10.03 4.61435 9.51082 3.36205 8.56823 2.42157ZM5.0348 10.0862C4.28879 10.0862 3.55791 9.88507 2.91776 9.50787L2.76654 9.41734L1.19388 9.82975L1.61225 8.30083L1.51144 8.14493C1.09698 7.48456 0.876901 6.72125 0.876327 5.94209C0.876327 3.65878 2.74134 1.79793 5.02975 1.79793C6.13868 1.79793 7.18208 2.23045 7.96337 3.01503C8.35022 3.39925 8.6568 3.85626 8.86532 4.35958C9.07385 4.86289 9.18018 5.4025 9.17814 5.94712C9.18822 8.23042 7.32321 10.0862 5.0348 10.0862ZM7.31313 6.98818C7.18712 6.92783 6.57217 6.62607 6.46128 6.58081C6.34534 6.54058 6.26469 6.52046 6.17901 6.64116C6.09332 6.76689 5.85641 7.04854 5.78584 7.129C5.71527 7.2145 5.63966 7.22456 5.51365 7.15918C5.38764 7.09883 4.98439 6.96304 4.51058 6.54058C4.13757 6.20864 3.89059 5.80127 3.81498 5.67553C3.74441 5.5498 3.8049 5.48442 3.87042 5.41904C3.92587 5.36372 3.99644 5.27319 4.05693 5.20278C4.11741 5.13237 4.14262 5.07704 4.18294 4.99658C4.22326 4.91108 4.2031 4.84067 4.17286 4.78032C4.14261 4.71996 3.89059 4.10639 3.78977 3.85492C3.68896 3.61352 3.58311 3.64369 3.5075 3.63866H3.26556C3.17987 3.63866 3.04881 3.66884 2.93288 3.79457C2.82199 3.9203 2.49939 4.22206 2.49939 4.83564C2.49939 5.44921 2.948 6.04267 3.00849 6.12314C3.06897 6.20864 3.89059 7.46597 5.14065 8.00411C5.43804 8.13487 5.66991 8.21031 5.85137 8.26563C6.14876 8.36119 6.42095 8.3461 6.6377 8.31592C6.87964 8.28072 7.37866 8.01416 7.47947 7.72246C7.58532 7.43076 7.58532 7.18433 7.55004 7.129C7.51476 7.07368 7.43915 7.04854 7.31313 6.98818Z"
-                                                  fill="#000"
-                                              ></path>
-                                          </svg>
-                                      </span>
-                                      <h6 class="pl-1.5 text-[11.5px] text-[#5f5f5f] tracking-wide font-supera700 ">Whatsapp</h6>
-                                  </a>
-                              </div>
-                          </div>
-                    </div>
-                  </div>
-
-                  <!--this will be displayed when main is not showing up (mini main)-->
-                  <div id="miniMainImm" class="hidden bg-[#ffffffcb] absolute bottom-[100%] right-1 z-50 cursor-pointer size-[28px] border-[0.0001px] rounded-full justify-center items-center">
-                    <img
-                        alt="agent image"
-                        loading="lazy"
-                        width="60"
-                        height="60"
-                        decoding="async"
-                        data-nimg="1"
-                        class="object-cover"
-                        src="./public/user.png"
-                        style="color: transparent;"
-                    />
-                  </div>
-              </div>
-          </div>
-      </div>
     </div>
   
 
@@ -3061,58 +2430,17 @@
         </div>
       </div>
     </footer>
-
-    <!-- light box -->
-    <div class="relative hidden" id="lightbox" role="dialog" tabindex="-1" aria-modal="true" data-headlessui-state="open" data-open="" style="z-index: 1000000000000000000;">
-      <div class="fixed inset-0 flex w-screen items-center justify-center p-4">
-          <div class="max-w-lg space-y-4 border bg-white p-12" id="headlessui-dialog-panel-:ru:" data-headlessui-state="open" data-open="">
-              <div class="fixed top-0 left-0 inset-0 z-[1000] bg-[#00000016] bg-opacity-80 flex items-center justify-center" style="overflow: hidden;">
-                  <div class="lb-container">
-                      <div class="lb-header" style="justify-content: flex-end;">
-                          <div title="Reset" class="lb-button lb-icon-reset lb-hide-mobile reload" style="order: unset;"></div>
-                          <div title="Zoom In" class="lb-button lb-icon-zoomin zoomin"></div>
-                          <div title="Zoom Out" class="lb-button lb-icon-zoomout zoomout lb-disabled"></div>
-                          <div title="Rotate left" class="lb-button lb-icon-rotate rotatel"></div>
-                          <div title="Rotate right" class="lb-button lb-icon-rotate rotater"></div>
-                          <div title="Close" class="lb-button lb-icon-close close" style="order: unset;"></div>
-                          <div class="lb-button download-btn flex justify-center items-center z-50" title="Download" style="cursor: pointer; padding: 10px;">
-                              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="text-white" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                      d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
-                                  ></path>
-                              </svg>
-                          </div>                                        
-                      </div>
-                      <div class="lb-canvas">
-                          <img
-                              draggable="false"
-                              class="lb-img"
-                              title=""
-                              alt=""
-                              src=""
-                              style="transform: translate3d(0px, 0px, 0px) scale(1) rotate(0deg);"
-                          />
-                          <div class="mobile-controls lb-show-mobile"><div id="resetMob" title="Reset" class="lb-button lb-icon-reset reload"></div></div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </div>
-
 </body>
-<script src="./src/js/scriptGallery.js"></script>
+<script src="./src/js/scriptAmenities.js"></script>
+<script src="./src/js/testimonialSlider.js" ></script>
 <script src="./src/js/modalHandler.js"></script>
-<script src="./src/js/counting.js"></script>
 <script src="./src/js/sidebar.js"></script>
 <script src="./src/js/needAssistant.js"></script>
 <script src="./src/js/needImediateAssistance.js"></script>
-<script src="./src/js/scrollGallery.js"></script>
-<script src="./src/js/galleryProjectMob.js"></script>
-<script src="./src/js/galleryNavigator.js"></script>
-<script src="./src/js/galery_mob_slider.js"></script>
-<script src="./src/js/lighthouse.js"></script>
+<script src="./src/js/locationSwiper.js"></script>
+<script src="./src/js/locationReadmore.js"></script>
 <script src="./src/js/copyright.js"></script>
+
 
 
 <script>
@@ -3136,5 +2464,6 @@
       });
   });
 </script>
+
 
 </html>
