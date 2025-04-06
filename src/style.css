@@ -974,7 +974,7 @@ overflow: hidden;
   transition: background 0.3s ease-in-out;
 }
 .bg-gallery-mob-black {
-  background:  url("../public/gallery_bg_black.svg") no-repeat center / cover; /* Change to desired hover effect */
+  background:  url("../public/gallery_bg_theme.svg") no-repeat center / cover; /* Change to desired hover effect */
   transition: background 0.3s ease-in-out;
 }
 
@@ -1271,6 +1271,15 @@ body.modal {
   overscroll-behavior: contain; /* Prevent scroll chaining */
 }
 
+body.sidebar {
+  overflow: hidden !important;
+  position: relative;
+}
+
+#sidebar{
+  overscroll-behavior: contain; /* Prevent scroll chaining */
+}
+
 .textFormInput{
   background-color: #295A4E80;
 }
@@ -1409,4 +1418,8 @@ body.modal {
 .active-price-header{
   background-image: url("../public/themebgimg.webp");
   color:white;
+}
+
+.bg-yellow-gradient {
+  background: linear-gradient(184deg, #F8AF41 -0.8%, #926726 105.55%);
 }
