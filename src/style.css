@@ -25,7 +25,7 @@ body {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #000 transparent;
+  scrollbar-color: #183b30 transparent;
 }
 /* Header transition styles */
   header {
@@ -33,7 +33,7 @@ body {
   }
   
   .header-scrolled {
-    background-color: #000;
+    background-color: #183b30;
     padding-top: 0.75rem !important; /* py-3 */
     padding-bottom: 0.75rem !important;
   }
@@ -869,40 +869,7 @@ body {
     }
   }
 
-  .activeUnitTab{
-    background-color: black;
-    color: #fff;
-  }
-
-  .activeUnitTabMob{
-    color: #aa601f;
-  }
-
-  .active-unit-plan-3d-tabs{
-    background-color: black;
-    color: #fff;
-  }
   
-  .active-unit-plan-3d-tabs-mob{
-    background-color: black;
-    color: #000;
-  }
-
-  
-
-  .h65{
-    height: 65vh !important;
-  }
-
-  .active-plan-header, .active-gallery-tab{
-    background-image: url("../public/themebgimg.webp");
-    color:white;
-  }
-
-  .active-price-header{
-    background-image: url("../public/themebgimg.webp");
-    color:white;
-  }
 
   #nearby .swiper-button-next,#nearby .swiper-button-prev {
     position: absolute;
@@ -1320,6 +1287,10 @@ body.modal {
   background-color: #183C31;
 }
 
+.bg-theme{
+  background-color: #326555;
+}
+
 .bg-green-fade{
   background-color: #244E41;
 }
@@ -1346,6 +1317,10 @@ body.modal {
   }
 }
 
+.text-theme{
+  color: #326555;
+}
+
 .text-clip {
   background-image: linear-gradient(191.56deg, #CD9136 55.67%, #67491B 105.42%);
   -webkit-background-clip: text;
@@ -1370,4 +1345,68 @@ body.modal {
 
 .contact_us_bg{
   background: url("../public/contact_us_bg.png") no-repeat center/cover;
+}
+
+.bg-nav-theme{
+  background-color: #fff;
+}
+
+@media (max-width:768px) {
+  .bg-nav-theme{
+  background-color: #326555;
+  }
+}
+
+.text-nav-theme{
+  color: #474536;
+}
+
+@media (max-width:768px) {
+  .text-nav-theme{
+  color: #fff;
+  }
+}
+
+.activeUnitTab{
+  background-color: #326555;
+  color: #fff;
+}
+
+.activeUnitTabMob{
+  color: #aa601f;
+}
+
+.active-unit-plan-3d-tabs{
+  background-color: #326555;
+  color: #fff;
+}
+
+.active-unit-plan-3d-tabs-mob{
+  background-color: #326555;
+  color: #fff;
+}
+
+
+
+.h65{
+  height: 65vh !important;
+}
+
+.active-plan-header, .active-gallery-tab{
+  background-color: #F8AF41;
+  color:white;
+}
+
+@media (max-width:768px) {
+  .active-plan-header{
+  background-color: #fff;
+  color: #326555;
+  }
+}
+
+
+
+.active-price-header{
+  background-image: url("../public/themebgimg.webp");
+  color:white;
 }
