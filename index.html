@@ -48,7 +48,35 @@
   .wave-container .delay3 { animation: waves 2.5s linear 1.3s infinite; }
   .wave-container .delay4 { animation: waves 2.5s linear 1.9s infinite; }
     
-      
+  .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 20;
+    }
+
+    /* Custom navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+    --swiper-navigation-size: 30px; /* Adjust arrow size */
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: Hover effects */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 0.8;
+}
+
+/* For better visibility on light backgrounds */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
     </style>
     
     <link rel="stylesheet" href="./src/style.css">
@@ -622,7 +650,8 @@
     <div>
      <!-- hero page main-->
         <section class="w-full h-screen relative">
-          <div class="swiper mySwiper">
+          <div class="swiper heroSwiper">
+            
             <div class="swiper-wrapper">
               <div
                 class="swiper-slide"
@@ -630,6 +659,7 @@
               >
                 <div class="absolute w-full h-full">
                   <div class="relative w-full h-full overflow-hidden">
+                    <div class="video-overlay"></div>
                     <video
                       alt="pinnacle"
                       aria-label="pinnacle Header Image"
@@ -707,8 +737,178 @@
                   </div>
                 </div>
               </div>
-            
+              <div
+                class="swiper-slide"
+                style="height: 100vh; width: 100%; display: flex"
+              >
+                <div class="absolute w-full h-full">
+                  <div class="relative w-full h-full overflow-hidden">
+                    <div class="video-overlay"></div>
+                    <video
+                      alt="pinnacle"
+                      aria-label="pinnacle Header Image"
+                      loading="lazy"
+                      decoding="async"
+                      data-nimg="fill"
+                      class="w-full h-full sm:object-top object-cover"
+                      style="
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        color: transparent;
+                      "
+                      autoplay
+                      muted
+                      loop=""
+                      sizes="100vw"
+                      src="./public/banner01.mp4"
+                    ></video>
+                    <div
+                      class="w-full h-full flex items-end sm:bg-[#00000048] relative z-30"
+                    >
+                      <div
+                        class="relative z-40 w-full h-full sm:h-[calc(100%-75px)] lg:h-[calc(100%-80px)]"
+                      >
+                        <div
+                          class="px-5 xs:px-10 lg:px-14 xl:px-16 3xl:px-4 mt-0 sm:mt-0 w-full h-full flex flex-col justify-center sm:justify-center items-start"
+                        >
+                          <div></div>
+                          <div
+                            class="lg:container mx-auto sm:mx-0 lg:mx-auto"
+                          >
+                            <h1
+                              class="mx-auto sm:mx-0 text-center sm:text-left w-full xs:w-[300px] xs:w-full cxs:w-[400px] sm:w-[580px] md:w-[631px] lg:w-[800px] 2xl:max-w-[1000px] 2xl:w-full   font-supera600 text-white whitespace-nowrap text-[26px] sm:text-[50px] md:text-[70px] xl:text-[80px] 3xl:text-[77px] capitalize
+                              tracking-wider leading-[40px] md:leading-[80px] block md:hidden"
+                            >
+                            Your Dream Home <br />in Kasauli – Where Luxury  <br /> Meets Nature
+                            </h1>
+                            <h1
+                              class="mx-auto sm:mx-0 text-center sm:text-left w-full xs:w-[300px] xs:w-full cxs:w-[400px] sm:w-[580px] md:w-[631px] lg:w-[800px] 2xl:max-w-[1000px] 2xl:w-full   font-supera600 text-white whitespace-nowrap text-[26px] sm:text-[50px] md:text-[58px] xl:text-[80px] 3xl:text-[77px] capitalize
+                              tracking-wider leading-[40px] md:leading-[80px] hidden md:block" 
+                            >
+                            Your Dream Home in Kasauli –<br />Where Luxury Meets Nature
+                            </h1>
+                            <h3
+                              class="text-center sm:text-left font-supera500  text-[14px] md:text-[24px] text-white capitalize tracking-wide mt-[8px] md:mt-[16px]"
+                            >
+                            Exclusive 78 Units with Spectacular Hill Views, Assured Rental Income, <br class="hidden md:block"> and World-Class Amenities.
+                            </h3>
+                            <div
+                              class="bg-backgroud-theme-local bg-right bg-cover mx-auto sm:mx-0 w-[175px] h-[44px] rounded-full text-black mt-[70px] md:mt-[60px] duration-1000"
+                            >
+                              <button
+                                aria-label="Buy now"
+                                id="why404"
+                                data-title="Talk to our Relationship Manager!" data-content="This is the first modal content."
+                                class="w-full h-full font-supera600 rounded-full cursor-pointer bg-white text-[#0b5c2f] text-[15px] duration-200 uppercase openModalBtn"
+                              >
+                                Buy now
+                              </button>
+                            </div>
+                            <h4
+                              class="text-center sm:text-left font-poppins font-medium text-[14px] text-white tracking-wide mt-[50px] md:mt-[22px]"
+                            >
+                            Rera No: HPRERASOL2024097/P
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                style="height: 100vh; width: 100%; display: flex"
+              >
+                <div class="absolute w-full h-full">
+                  <div class="relative w-full h-full overflow-hidden">
+                    <div class="video-overlay"></div>
+                    <video
+                      alt="pinnacle"
+                      aria-label="pinnacle Header Image"
+                      loading="lazy"
+                      decoding="async"
+                      data-nimg="fill"
+                      class="w-full h-full sm:object-top object-cover"
+                      style="
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        color: transparent;
+                      "
+                      autoplay
+                      muted
+                      loop=""
+                      sizes="100vw"
+                      src="./public/banner01.mp4"
+                    ></video>
+                    <div
+                      class="w-full h-full flex items-end sm:bg-[#00000048] relative z-30"
+                    >
+                      <div
+                        class="relative z-40 w-full h-full sm:h-[calc(100%-75px)] lg:h-[calc(100%-80px)]"
+                      >
+                        <div
+                          class="px-5 xs:px-10 lg:px-14 xl:px-16 3xl:px-4 mt-0 sm:mt-0 w-full h-full flex flex-col justify-center sm:justify-center items-start"
+                        >
+                          <div></div>
+                          <div
+                            class="lg:container mx-auto sm:mx-0 lg:mx-auto"
+                          >
+                            <h1
+                              class="mx-auto sm:mx-0 text-center sm:text-left w-full xs:w-[300px] xs:w-full cxs:w-[400px] sm:w-[580px] md:w-[631px] lg:w-[800px] 2xl:max-w-[1000px] 2xl:w-full   font-supera600 text-white whitespace-nowrap text-[26px] sm:text-[50px] md:text-[70px] xl:text-[80px] 3xl:text-[77px] capitalize
+                              tracking-wider leading-[40px] md:leading-[80px] block md:hidden"
+                            >
+                            Your Dream Home <br />in Kasauli – Where Luxury  <br /> Meets Nature
+                            </h1>
+                            <h1
+                              class="mx-auto sm:mx-0 text-center sm:text-left w-full xs:w-[300px] xs:w-full cxs:w-[400px] sm:w-[580px] md:w-[631px] lg:w-[800px] 2xl:max-w-[1000px] 2xl:w-full   font-supera600 text-white whitespace-nowrap text-[26px] sm:text-[50px] md:text-[58px] xl:text-[80px] 3xl:text-[77px] capitalize
+                              tracking-wider leading-[40px] md:leading-[80px] hidden md:block" 
+                            >
+                            Your Dream Home in Kasauli –<br />Where Luxury Meets Nature
+                            </h1>
+                            <h3
+                              class="text-center sm:text-left font-supera500  text-[14px] md:text-[24px] text-white capitalize tracking-wide mt-[8px] md:mt-[16px]"
+                            >
+                            Exclusive 78 Units with Spectacular Hill Views, Assured Rental Income, <br class="hidden md:block"> and World-Class Amenities.
+                            </h3>
+                            <div
+                              class="bg-backgroud-theme-local bg-right bg-cover mx-auto sm:mx-0 w-[175px] h-[44px] rounded-full text-black mt-[70px] md:mt-[60px] duration-1000"
+                            >
+                              <button
+                                aria-label="Buy now"
+                                id="why404"
+                                data-title="Talk to our Relationship Manager!" data-content="This is the first modal content."
+                                class="w-full h-full font-supera600 rounded-full cursor-pointer bg-white text-[#0b5c2f] text-[15px] duration-200 uppercase openModalBtn"
+                              >
+                                Buy now
+                              </button>
+                            </div>
+                            <h4
+                              class="text-center sm:text-left font-poppins font-medium text-[14px] text-white tracking-wide mt-[50px] md:mt-[22px]"
+                            >
+                            Rera No: HPRERASOL2024097/P
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>              
           </div>
         </section>
         <!-- luxury about us -->
@@ -6010,7 +6210,8 @@
     </footer>
 </body>
 <script src="./src/js/script.js"></script>
-<script src="./src/js/testimonialSlider.js" ></script>
+<script src="./src/js/heroSlider.js"></script>
+<script src="./src/js/testimonialSlider.js"></script>
 <script src="./src/js/GallerySlider.js"></script>
 <script src="./src/js/productsSlider.js"></script>
 <script src="./src/js/modalHandler.js"></script>
