@@ -710,6 +710,15 @@
   .my-\[60px\] {
     margin-block: 60px;
   }
+  .my-\[60px_60px\] {
+    margin-block: 60px 60px;
+  }
+  .my-\[80px_60px\] {
+    margin-block: 80px 60px;
+  }
+  .my-\[800px_60px\] {
+    margin-block: 800px 60px;
+  }
   .-mt-0 {
     margin-top: calc(var(--spacing) * -0);
   }
@@ -931,6 +940,12 @@
     display: block;
     -webkit-box-orient: horizontal;
     -webkit-line-clamp: unset;
+  }
+  .\!block {
+    display: block !important;
+  }
+  .\!hidden {
+    display: none !important;
   }
   .block {
     display: block;
@@ -6290,6 +6305,16 @@
       margin-bottom: calc(var(--spacing) * 0);
     }
   }
+  .md\:\!block {
+    @media (width >= 48rem) {
+      display: block !important;
+    }
+  }
+  .md\:\!hidden {
+    @media (width >= 48rem) {
+      display: none !important;
+    }
+  }
   .md\:block {
     @media (width >= 48rem) {
       display: block;
@@ -6394,6 +6419,11 @@
   .md\:h-\[500px\] {
     @media (width >= 48rem) {
       height: 500px;
+    }
+  }
+  .md\:h-\[550px\] {
+    @media (width >= 48rem) {
+      height: 550px;
     }
   }
   .md\:h-\[600px\] {
@@ -6705,6 +6735,11 @@
   .md\:gap-y-\[44px\] {
     @media (width >= 48rem) {
       row-gap: 44px;
+    }
+  }
+  .md\:overflow-y-auto {
+    @media (width >= 48rem) {
+      overflow-y: auto;
     }
   }
   .md\:rounded-\[5px\] {
