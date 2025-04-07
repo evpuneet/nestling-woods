@@ -139,7 +139,7 @@ function updateUnitPlanActiveTab() {
 
   // Update combination buttons
   combinationBtns.forEach(btn => {
-    const isActive = parseInt(btn.dataset.slide) === unitPlanCurrentSlide &&
+    const isActive = parseInt(btn.dataset.slide) === currentSlide &&
                  parseInt(btn.dataset.area) === currentArea &&
                  parseInt(btn.dataset.type) === currentType;
     btn.classList.toggle('bg-amber-800', isActive);
@@ -185,7 +185,7 @@ function updateUnitPlanActiveTab() {
   // Add event listeners for combination buttons
   combinationBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        unitPlanCurrentSlide = parseInt(btn.dataset.slide);
+        currentSlide = parseInt(btn.dataset.slide);
         currentArea = parseInt(btn.dataset.area);
         currentType = parseInt(btn.dataset.type);
         updateUnitPlanActiveTab();
