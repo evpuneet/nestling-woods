@@ -186,9 +186,10 @@ function updateUnitPlanActiveTab() {
   combinationBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         unitPlanCurrentSlide = parseInt(btn.dataset.slide);
+        const index = parseInt(btn.dataset.index);
         currentArea = parseInt(btn.dataset.area);
         currentType = parseInt(btn.dataset.type);
-        updateUnitPlanActiveTab();
+        updateUnitPlanActiveTab(index);
     });
   });
 
