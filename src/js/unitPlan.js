@@ -185,11 +185,12 @@ function updateUnitPlanActiveTab() {
   // Add event listeners for combination buttons
   combinationBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        unitPlanCurrentSlide = parseInt(btn.dataset.slide);
-        const index = parseInt(btn.dataset.index);
+      unitPlanCurrentSlide = parseInt(btn.dataset.slide, 10);
+      const index = parseInt(btn.dataset.index, 10);
         currentArea = parseInt(btn.dataset.area);
         currentType = parseInt(btn.dataset.type);
         updateUnitPlanActiveTab(index);
+        updateUnitPlanActiveIndicator(); 
     });
   });
 
