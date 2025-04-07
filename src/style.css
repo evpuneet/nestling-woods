@@ -442,6 +442,34 @@ body {
     background-size: cover;
   }
 
+  .bg-amennities{
+    background: url("../public/amenitiesHero.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg-gallery{
+    background: url("../public/galleryHero.webp");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg-price{
+    background: url("../public/priceHero.webp");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg-plan{
+    background: url("../public/planHero.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .section-gap {
     margin-top: 30px;
   }
@@ -483,7 +511,7 @@ body {
   }
 
   .bg-location-map{
-    background: url("../public/locationmap_main.png");
+    background: url("../public/locationHero.png");
     background-repeat: no-repeat;
     background-size: cover;
   }

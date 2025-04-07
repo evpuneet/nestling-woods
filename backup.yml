@@ -183,3 +183,19 @@
                             Start of Raft
                           </h6>
                         </div>
+
+                        <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
+                                  <span class="pr-1 font-supera600">17&nbsp;</span>Water Body with Signage
+                              </li>
+                              <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
+                                  <span class="pr-1 font-supera600">18&nbsp;</span>Open Air Amphitheatre
+                              </li>
+                              <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
+                                  <span class="pr-1 font-supera600">19&nbsp;</span>Outdoor Gym
+                              </li>
+                              <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
+                                  <span class="pr-1 font-supera600">20&nbsp;</span>Yoga Lawn With Wooden Decks
+                              </li>
+                              <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
+                                  <span class="pr-1 font-supera600">21&nbsp;</span>Central Lawn
+                              </li>
