@@ -1306,13 +1306,17 @@ body.modal {
   overscroll-behavior: contain; /* Prevent scroll chaining */
 }
 
-body.sidebar {
+body #sidebarWrapper {
   overflow: hidden !important;
-  position: relative;
+
 }
 
-#sidebar{
+#sidebarWrapper{
   overscroll-behavior: contain; /* Prevent scroll chaining */
+}
+
+.sidebarWrapper:has(#sidebar:not(.hidden)) ~ * {
+  overflow: hidden;
 }
 
 .textFormInput{
@@ -1457,4 +1461,11 @@ body.sidebar {
 
 .bg-yellow-gradient {
   background: linear-gradient(184deg, #F8AF41 -0.8%, #926726 105.55%);
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  position: fixed; /* Optional, but ensures scroll is frozen on mobile */
 }

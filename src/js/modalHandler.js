@@ -34,32 +34,32 @@ modal.addEventListener("click", (e) => {
     }
 });
 
-// floading effect for the header
+// // floading effect for the header
 
-document.addEventListener("DOMContentLoaded", function () {
-    let timeout;
-    const floatingDiv = document.getElementById("floatingBar"); // Target by ID
+// document.addEventListener("DOMContentLoaded", function () {
+//     let timeout;
+//     const floatingDiv = document.getElementById("floatingBar"); // Target by ID
 
-    function hideDiv() {
-        floatingDiv.style.transform = "translateY(200%)"; // Move it down
-        // floatingDiv.style.transition = "transform 1s ease-in-out";
-    }
+//     function hideDiv() {
+//         floatingDiv.style.transform = "translateY(200%)"; // Move it down
+//         // floatingDiv.style.transition = "transform 1s ease-in-out";
+//     }
 
-    function showDiv() {
-        floatingDiv.style.transform = "translateY(0%)"; // Bring it back
-        // floatingDiv.style.transition = "transform 1s ease-in-out";
+//     function showDiv() {
+//         floatingDiv.style.transform = "translateY(0%)"; // Bring it back
+//         // floatingDiv.style.transition = "transform 1s ease-in-out";
 
-        clearTimeout(timeout);
-        timeout = setTimeout(hideDiv, 4000); // Hide after 4s of inactivity
-    }
+//         clearTimeout(timeout);
+//         timeout = setTimeout(hideDiv, 4000); // Hide after 4s of inactivity
+//     }
 
-    // Detect scrolling anywhere on the page
-    window.addEventListener("scroll", showDiv);
+//     // Detect scrolling anywhere on the page
+//     window.addEventListener("scroll", showDiv);
     
-    // Detect tapping or movement on the screen
-    document.addEventListener("touchstart", showDiv);
-    document.addEventListener("mousemove", showDiv);
+//     // Detect tapping or movement on the screen
+//     document.addEventListener("touchstart", showDiv);
+//     document.addEventListener("mousemove", showDiv);
 
-    // Initially set timeout to hide the div after 4 seconds
-    timeout = setTimeout(hideDiv, 4000);
-});
+//     // Initially set timeout to hide the div after 4 seconds
+//     timeout = setTimeout(hideDiv, 4000);
+// });

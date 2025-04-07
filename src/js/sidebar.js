@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function openSidebar() {
         sidebarWrapper.classList.remove("hidden");  // Show wrapper (backdrop + sidebar)
+        document.body.classList.add("no-scroll");   // ✅ Lock scroll
         setTimeout(() => {
             sidebar.classList.remove("translate-x-full"); // Slide in sidebar
         }, 10); // Small delay for smooth transition
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function closeSidebar() {
         sidebar.classList.add("translate-x-full"); // Slide out sidebar
+        document.body.classList.remove("no-scroll"); // ✅ Re-enable scroll
         setTimeout(() => {
             sidebarWrapper.classList.add("hidden"); // Hide wrapper after animation
         }, 300); // Match the transition duration

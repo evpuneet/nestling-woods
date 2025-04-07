@@ -60,7 +60,10 @@
 //     }
 //   });
 
-const trigger = document.getElementById('menuTrigger');
+
+
+// Radial menu code 
+  const trigger = document.getElementById('menuTrigger');
   const menu = document.getElementById('radialMenu');
   const menuItems = document.querySelectorAll('#radialMenu a');
 
@@ -75,6 +78,8 @@ const trigger = document.getElementById('menuTrigger');
   function toggleMenu() {
     const isOpening = !menu.classList.contains('active');
     
+    // Toggle body scroll
+    document.body.style.overflow = isOpening ? 'hidden' : '';
     // Toggle trigger rotation
     trigger.classList.toggle('active');
     
@@ -113,3 +118,84 @@ const trigger = document.getElementById('menuTrigger');
       toggleMenu();
     }
   });
+
+
+//   // floating effect for the header
+// document.addEventListener("DOMContentLoaded", function () {
+//   let timeout;
+//   const floatingDiv = document.getElementById("floatingBar");
+//   const radialMenu = document.getElementById('radialMenu'); // Get radial menu element
+
+//   function hideDiv() {
+//       floatingDiv.style.transform = "translateY(200%)";
+//   }
+
+//   function showDiv() {
+//       floatingDiv.style.transform = "translateY(0%)";
+      
+//       // Check if radial menu is active
+//       if (radialMenu.classList.contains('active')) {
+//           clearTimeout(timeout);
+//           return; // Exit if menu is active
+//       }
+
+//       clearTimeout(timeout);
+//       timeout = setTimeout(hideDiv, 4000);
+//   }
+
+//   window.addEventListener("scroll", showDiv);
+//   document.addEventListener("touchstart", showDiv);
+//   document.addEventListener("mousemove", showDiv);
+//   timeout = setTimeout(hideDiv, 4000);
+// });
+
+// new code for radila menu active inaciitve
+  document.addEventListener("DOMContentLoaded", function () {
+    let timeout;
+    let isRadialActive = false;
+  
+    const floatingDiv = document.getElementById("floatingBar");
+    const radialMenu = document.getElementById("radialMenu");
+  
+    function hideDiv() {
+      if (!isRadialActive) {
+        floatingDiv.style.transform = "translateY(200%)";
+      }
+    }
+  
+    function showDiv() {
+      floatingDiv.style.transform = "translateY(0%)";
+  
+      clearTimeout(timeout);
+      if (!isRadialActive) {
+        timeout = setTimeout(hideDiv, 4000);
+      }
+    }
+  
+    // Listen for class changes on radialMenu
+    const observer = new MutationObserver(() => {
+      isRadialActive = radialMenu.classList.contains("active");
+  
+      // If active, show the bar and cancel hiding
+      if (isRadialActive) {
+        clearTimeout(timeout);
+        floatingDiv.style.transform = "translateY(0%)";
+      } else {
+        showDiv(); // Trigger timeout again
+      }
+    });
+  
+    observer.observe(radialMenu, { attributes: true, attributeFilter: ["class"] });
+  
+    window.addEventListener("scroll", showDiv);
+    document.addEventListener("touchstart", showDiv);
+    document.addEventListener("mousemove", showDiv);
+  
+    timeout = setTimeout(hideDiv, 4000);
+  });
+  
+
+
+
+
+
