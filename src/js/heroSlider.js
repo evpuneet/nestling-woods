@@ -27,9 +27,9 @@ const swiper = new Swiper('.heroSwiper', {
     
     // Pagination
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
     
     // Enable keyboard control
     keyboard: {
