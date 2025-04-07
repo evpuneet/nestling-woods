@@ -12,45 +12,171 @@
 <body>
 
 
-                <div class="relative" id="lightbox" role="dialog" tabindex="-1" aria-modal="true" data-headlessui-state="open" data-open="" style="z-index: 700;">
-                    <div class="fixed inset-0 flex w-screen items-center justify-center p-4">
-                        <div class="max-w-lg space-y-4 border bg-white p-12" id="headlessui-dialog-panel-:ru:" data-headlessui-state="open" data-open="">
-                            <div class="fixed top-0 left-0 inset-0 z-[1000] bg-[#00000016] bg-opacity-80 flex items-center justify-center" style="overflow: hidden;">
-                                <div class="lb-container">
-                                    <div class="lb-header" style="justify-content: flex-end;">
-                                        <div title="Reset" class="lb-button lb-icon-reset lb-hide-mobile reload" style="order: unset;"></div>
-                                        <div title="Zoom In" class="lb-button lb-icon-zoomin zoomin"></div>
-                                        <div title="Zoom Out" class="lb-button lb-icon-zoomout zoomout lb-disabled"></div>
-                                        <div title="Rotate left" class="lb-button lb-icon-rotate rotatel"></div>
-                                        <div title="Rotate right" class="lb-button lb-icon-rotate rotater"></div>
-                                        <div title="Close" class="lb-button lb-icon-close close" style="order: unset;"></div>
-                                        <div class="lb-button download-btn flex justify-center items-center z-50" title="Download" style="cursor: pointer; padding: 10px;">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="text-white" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
-                                                ></path>
-                                            </svg>
-                                        </div>                                        
-                                    </div>
-                                    <div class="lb-canvas">
-                                        <img
-                                            draggable="false"
-                                            class="lb-img"
-                                            title=""
-                                            alt=""
-                                            src="./public/amenities-img3.webp"
-                                            style="transform: translate3d(0px, 0px, 0px) scale(1) rotate(0deg);"
-                                        />
-                                        <div class="mobile-controls lb-show-mobile"><div id="resetMob" title="Reset" class="lb-button lb-icon-reset reload"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+    <div class="w-full p-4 space-y-2">
+        <div class="grid grid-cols-2 gap-2 text-center">
+            <div class="slide-btn bg-red-900 text-white cursor-pointer" data-slide="0">slide 1</div>
+            <div class="slide-btn bg-red-900 text-white cursor-pointer" data-slide="1">slide 2</div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+            <div>
+                <img class="object-cover w-full h-full" id="main-image" src="./public/slide1-area1-type1.jpg" alt="">
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-center">
+                <div class="area-btn bg-amber-900 text-white cursor-pointer" data-area="0">area 1</div>
+                <div class="area-btn bg-amber-900 text-white cursor-pointer" data-area="1">area 2</div>
+                <div class="type-btn bg-amber-900 text-white cursor-pointer" data-type="0">type 1</div>
+                <div class="type-btn bg-amber-900 text-white cursor-pointer" data-type="1">type 2</div>
+                <div class="bg-amber-900 text-white col-span-2" id="heading">Initial Heading</div>
+            </div>
+        </div>
+        <!-- Update the combination buttons section with data attributes -->
+        <div class="grid grid-cols-4 text-center gap-2">
+            <div class="combination-btn bg-amber-600 text-white cursor-pointer" 
+                data-slide="0" data-area="0" data-type="0">s1a1t1</div>
+            <div class="combination-btn bg-amber-600 text-white cursor-pointer" 
+                data-slide="0" data-area="0" data-type="1">s1a1t2</div>
+            <div class="combination-btn bg-amber-600 text-white cursor-pointer" 
+                data-slide="0" data-area="1" data-type="0">s1a2t1</div>
+            <div class="combination-btn bg-amber-600 text-white cursor-pointer" 
+                data-slide="0" data-area="1" data-type="1">s1a2t2</div>
+            <div class="combination-btn bg-amber-600 text-white cursor-pointer" 
+                data-slide="1" data-area="0" data-type="0">s2a1t1</div>
+            <div class="combination-btn bg-amber-600 text-white cursor-pointer" 
+                data-slide="1" data-area="0" data-type="1">s2a1t2</div>
+            <div class="combination-btn bg-amber-600 text-white cursor-pointer" 
+                data-slide="1" data-area="1" data-type="0">s2a2t1</div>
+            <div class="combination-btn bg-amber-600 text-white cursor-pointer" 
+                data-slide="1" data-area="1" data-type="1">s2a2t2</div>
+        </div>
+    </div>
     
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slidesData = [
+            { // Slide 1
+                areas: [
+                    { // Area 1
+                        types: [
+                            { image: './public/slide1-area1-type1.jpg', heading: 'Slide 1 Area 1 Type 1', },
+                            { image: './public/slide1-area1-type2.jpg', heading: 'Slide 1 Area 1 Type 2' }
+                        ]
+                    },
+                    { // Area 2
+                        types: [
+                            { image: './public/slide1-area2-type1.jpg', heading: 'Slide 1 Area 2 Type 1' },
+                            { image: './public/slide1-area2-type2.jpg', heading: 'Slide 1 Area 2 Type 2' }
+                        ]
+                    }
+                ]
+            },
+            { // Slide 2
+                areas: [
+                    { // Area 1
+                        types: [
+                            { image: './public/slide2-area1-type1.jpg', heading: 'Slide 2 Area 1 Type 1' },
+                            { image: './public/slide2-area1-type2.jpg', heading: 'Slide 2 Area 1 Type 2' }
+                        ]
+                    },
+                    { // Area 2
+                        types: [
+                            { image: './public/slide2-area2-type1.jpg', heading: 'Slide 2 Area 2 Type 1' },
+                            { image: './public/slide2-area2-type2.jpg', heading: 'Slide 2 Area 2 Type 2' }
+                        ]
+                    }
+                ]
+            }
+        ];
+    
+        let currentSlide = 0;
+        let currentArea = 0;
+        let currentType = 0;
+    
+        // DOM Elements
+        const slideBtns = document.querySelectorAll('.slide-btn');
+        const areaBtns = document.querySelectorAll('.area-btn');
+        const typeBtns = document.querySelectorAll('.type-btn');
+        const mainImage = document.getElementById('main-image');
+        const heading = document.getElementById('heading');
+        // Get all combination buttons
+        const combinationBtns = document.querySelectorAll('.combination-btn');
+    
+        
 
-<script src="./src/js/lightHouse.js"></script>
+        function updateActiveStates() {
+            // Update slide buttons
+            slideBtns.forEach((btn, index) => {
+                btn.classList.toggle('bg-red-800', index === currentSlide);
+                btn.classList.toggle('bg-red-900', index !== currentSlide);
+            });
+    
+            // Update area buttons
+            areaBtns.forEach((btn, index) => {
+                btn.classList.toggle('bg-amber-800', index === currentArea);
+                btn.classList.toggle('bg-amber-900', index !== currentArea);
+            });
+    
+            // Update type buttons
+            typeBtns.forEach((btn, index) => {
+                btn.classList.toggle('bg-amber-800', index === currentType);
+                btn.classList.toggle('bg-amber-900', index !== currentType);
+            });
+
+            // Update combination buttons
+            combinationBtns.forEach(btn => {
+            const isActive = parseInt(btn.dataset.slide) === currentSlide &&
+                         parseInt(btn.dataset.area) === currentArea &&
+                         parseInt(btn.dataset.type) === currentType;
+            btn.classList.toggle('bg-amber-800', isActive);
+            btn.classList.toggle('bg-amber-600', !isActive);
+            });
+    
+            // Update content
+            const currentData = slidesData[currentSlide].areas[currentArea].types[currentType];
+            mainImage.src = currentData.image;
+            heading.textContent = currentData.heading;
+        }
+    
+        // Event Listeners
+        slideBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentSlide = parseInt(btn.dataset.slide);
+                currentArea = 0;
+                currentType = 0;
+                updateActiveStates();
+            });
+        });
+    
+        areaBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentArea = parseInt(btn.dataset.area);
+                currentType = 0;
+                updateActiveStates();
+            });
+        });
+    
+        typeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentType = parseInt(btn.dataset.type);
+                updateActiveStates();
+            });
+        });
+
+        // Add event listeners for combination buttons
+        combinationBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentSlide = parseInt(btn.dataset.slide);
+                currentArea = parseInt(btn.dataset.area);
+                currentType = parseInt(btn.dataset.type);
+                updateActiveStates();
+            });
+        });
+
+
+    
+        // Initialize
+        updateActiveStates();
+    });
+    </script>
+
 </html>

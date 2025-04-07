@@ -1,22 +1,22 @@
 // Example slide data for Unit Plan Slider
 const unitPlanSlides = [
-    {
-      image: "./public/unit-plan-map1.webp",
-      heading: "EXCLUSIVE Studio apartment ",
-      price: "706.93", //its area dont confuse
-      ReraCarpetArea: "1823.61 Sq.Ft",
-      BalconyArea: "383.61 sq.ft.",
-      type:"3+1 BHK",
-    },
-    {
-      image: "./public/unit-plan-map2.webp",
-      heading: "EXCLUSIVE 1 bhk Apartment",
-      price: "922.13", //its area dont confuse
-      ReraCarpetArea: "1823.61 sq.ft.",
-      BalconyArea: "383.61 sq.ft.",
-      type:"4+1 BHK",
-    },
-  ];
+  {
+    image: "./public/unit-plan-map1.webp",
+    heading: "EXCLUSIVE Studio apartment ",
+    price: "706.93", //its area dont confuse
+    ReraCarpetArea: "1823.61 Sq.Ft",
+    BalconyArea: "383.61 sq.ft.",
+    type:"3+1 BHK",
+  },
+  {
+    image: "./public/unit-plan-map2.webp",
+    heading: "EXCLUSIVE 1 bhk Apartment",
+    price: "922.13", //its area dont confuse
+    ReraCarpetArea: "1823.61 sq.ft.",
+    BalconyArea: "383.61 sq.ft.",
+    type:"4+1 BHK",
+  },
+];
 
   document.addEventListener("DOMContentLoaded", () => {
 let unitPlanCurrentSlide = 0;
@@ -39,14 +39,6 @@ function updateUnitPlanSlide(index) {
     element.textContent = slide.price + " Sq.Ft";
   });
   
-  // --- Update Mini Data Display ---
-  // Update the mini image
-  document.getElementById("unit-plan-mini-image").src = slide.image;
-  // Update the mini heading
-  document.getElementById("unit-plan-mini-type").textContent = slide.type;
-  // Update the mini price
-  document.getElementById("unit-plan-mini-price").textContent = slide.price + " Sq.Ft";
-
   updateUnitPlanActiveTab();
   updateUnitPlanActiveIndicator();
 }
@@ -116,3 +108,6 @@ function updateUnitPlanActiveTab() {
 // Initialize the slider on load
 updateUnitPlanSlide(0);
   })
+
+
+  

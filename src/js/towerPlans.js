@@ -6,9 +6,9 @@ const towerPlanSlides = [
     {
       image: "./public/unit-plan-map2.webp",
     },
-    {
-        image: "./public/unit-plan-map2.webp",
-      },
+    // {
+    //     image: "./public/unit-plan-map2.webp",
+    //   },
   ];
 
   document.addEventListener("DOMContentLoaded", () => {
