@@ -112,13 +112,13 @@ function updateUnitPlanActiveTab() {
   // Bottom tabs background update
   document.querySelectorAll(".unit-plan-tabs-bottom > div").forEach((btn, idx) => {
     btn.classList.toggle("bg-theme", idx === unitPlanCurrentSlide);
-    btn.classList.toggle("text-[#fff]", idx === unitPlanCurrentSlide);
+    btn.classList.toggle("text-white", idx === unitPlanCurrentSlide);
+    
   });
   
   // Bottom tabs button text update
   document.querySelectorAll(".unit-plan-tabs-bottom > div > button").forEach((btn, idx) => {
-    btn.classList.toggle("text-[#fff]", idx === unitPlanCurrentSlide);
-    btn.classList.toggle("bg-theme", idx === unitPlanCurrentSlide);
+    btn.classList.toggle("activeUnitTab", idx === unitPlanCurrentSlide);
   });
 
   // Update area buttons
@@ -142,8 +142,8 @@ function updateUnitPlanActiveTab() {
     const isActive = parseInt(btn.dataset.slide) === unitPlanCurrentSlide &&
                  parseInt(btn.dataset.area) === currentArea &&
                  parseInt(btn.dataset.type) === currentType;
-    btn.classList.toggle('bg-amber-800', isActive);
-    btn.classList.toggle('bg-amber-600', !isActive);
+    btn.classList.toggle('bg-theme', isActive);
+    btn.classList.toggle('bg-white', !isActive);
     });
 
   // Update content
