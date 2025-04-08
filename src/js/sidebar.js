@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.remove("no-scroll"); // ✅ Re-enable scroll
         setTimeout(() => {
             sidebarWrapper.classList.add("hidden"); // Hide wrapper after animation
-        }, 300); // Match the transition duration
+        }, 700); // Match the transition duration
     }
 
     toggleBtn.addEventListener("click", openSidebar);
