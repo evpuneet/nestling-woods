@@ -1376,6 +1376,9 @@
   .w-\[26px\] {
     width: 26px;
   }
+  .w-\[27px\] {
+    width: 27px;
+  }
   .w-\[30px\] {
     width: 30px;
   }
@@ -6714,10 +6717,34 @@
       border-radius: 0;
     }
   }
+  .md\:border {
+    @media (width >= 48rem) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
   .md\:border-0 {
     @media (width >= 48rem) {
       border-style: var(--tw-border-style);
       border-width: 0px;
+    }
+  }
+  .md\:border-1 {
+    @media (width >= 48rem) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
+  .md\:border-t-1 {
+    @media (width >= 48rem) {
+      border-top-style: var(--tw-border-style);
+      border-top-width: 1px;
+    }
+  }
+  .md\:border-t-2 {
+    @media (width >= 48rem) {
+      border-top-style: var(--tw-border-style);
+      border-top-width: 2px;
     }
   }
   .md\:border-r-2 {
