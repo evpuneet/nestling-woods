@@ -7,13 +7,13 @@ const slidesData = [
       areas: [
           { // Area 1
               types: [
-                  { image: './public/unit-plan-map1.webp', heading: 'Slide 1 Area 1 Type 1', },
+                  { image: './public/s1a1t1.png', heading: 'EXCLUSIVE Studio apartment ', },
                   { image: './public/unit-plan-map2.webp', heading: 'Slide 1 Area 1 Type 2' }
               ]
           },
           { // Area 2
               types: [
-                  { image: './public/sm5.webp', heading: 'Slide 1 Area 2 Type 1' },
+                  { image: './public/s1a2t1.png', heading: 'Studio apartment with extended balcony - corner unit' },
                   { image: './public/sm6.webp', heading: 'Slide 1 Area 2 Type 2' }
               ]
           }
@@ -23,13 +23,13 @@ const slidesData = [
       areas: [
           { // Area 1
               types: [
-                  { image: './public/sm1.webp', heading: 'Slide 2 Area 1 Type 1' },
+                  { image: './public/s2a1t1.png', heading: 'EXCLUSIVE 1BHK apartment ' },
                   { image: './public/sm2.webp', heading: 'Slide 2 Area 1 Type 2' }
               ]
           },
           { // Area 2
               types: [
-                  { image: './public/sm3.webp', heading: 'Slide 2 Area 2 Type 1' },
+                  { image: './public/s2a2t1.png', heading: 'EXCLUSIVE 1BHK apartment with extended balcony - corner unit' },
                   { image: './public/sm4.webp', heading: 'Slide 2 Area 2 Type 2' }
               ]
           }

@@ -714,9 +714,6 @@
   .my-\[30px_40px\] {
     margin-block: 30px 40px;
   }
-  .my-\[50\] {
-    margin-block: 50;
-  }
   .my-\[50px\] {
     margin-block: 50px;
   }
@@ -818,9 +815,6 @@
   }
   .mt-\[30px\] {
     margin-top: 30px;
-  }
-  .mt-\[30pz\] {
-    margin-top: 30pz;
   }
   .mt-\[40px\] {
     margin-top: 40px;
@@ -2392,17 +2386,11 @@
   .rounded-\[12\.11px\] {
     border-radius: 12.11px;
   }
-  .rounded-\[12px\] {
-    border-radius: 12px;
-  }
   .rounded-\[13px\] {
     border-radius: 13px;
   }
   .rounded-\[20px\] {
     border-radius: 20px;
-  }
-  .rounded-\[20pz\] {
-    border-radius: 20pz;
   }
   .rounded-\[22px\] {
     border-radius: 22px;
@@ -2895,9 +2883,6 @@
   }
   .bg-\[\#FFF\] {
     background-color: #FFF;
-  }
-  .bg-\[\#\] {
-    background-color: #;
   }
   .bg-\[\#a4591a\] {
     background-color: #a4591a;
@@ -3620,9 +3605,6 @@
   }
   .text-\[18px\] {
     font-size: 18px;
-  }
-  .text-\[19px\] {
-    font-size: 19px;
   }
   .text-\[20px\] {
     font-size: 20px;
@@ -6176,11 +6158,6 @@
       margin-top: 22px;
     }
   }
-  .md\:mt-\[30px\] {
-    @media (width >= 48rem) {
-      margin-top: 30px;
-    }
-  }
   .md\:mt-\[35px\] {
     @media (width >= 48rem) {
       margin-top: 35px;
@@ -6646,6 +6623,11 @@
   .md\:gap-y-\[44px\] {
     @media (width >= 48rem) {
       row-gap: 44px;
+    }
+  }
+  .md\:self-auto {
+    @media (width >= 48rem) {
+      align-self: auto;
     }
   }
   .md\:rounded-\[5px\] {
