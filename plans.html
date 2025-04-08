@@ -764,6 +764,10 @@
                       <!-- on 3d opacity should be 0 also z-index -->
                       <div id="main2dskeleton" class="h-full opacity-100 duration-500 w-full relative z-0 flex items-start">
                           <div class="w-full h-[100%] 3xl:h-full flex flex-col sm:flex-row items-center justify-center sm:justify-between py-1 lg:py-4 px-1 sm:px-4">
+                            <div class="w-[50px] h-[50px] bg-[#f4f4f4] absolute flex items-center justify-center top-0 right-0 rounded-[10px]">
+                              <img src="./public/expand-icon.svg" alt="" class="object-cover w-[50%] pointer-events-none">
+                            </div>
+
                               <div class="w-full sm:w-1/2 h-1/2 sm:h-full my-1 sm:my-0 px-1.5 md:px-1 cmd:px-0">
                                   <div class="h-full w-full relative floorplans-unitplan-imgs">
                                       <img
@@ -772,7 +776,7 @@
                                           loading="lazy"
                                           decoding="async"
                                           data-nimg="fill"
-                                          class="cursor-pointer object-contain "
+                                          class="cursor-pointer object-contain open-lightbox"
                                           sizes="100vw"
                                           src="./public/unit-plan-map1.webp"
                                           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
@@ -1039,9 +1043,9 @@
                   <div id="footer2d" class="opacity-100 duration-500 relative z-20 w-full mt-5 md:mt-2 pt-[19px] pb-[36px] sm:bg-[#F4F4F4]">
                       <div class="w-full sm:w-[88%] 3xl:containers mx-auto flex flex-col">
                           <div class="w-[88%] mx-auto">
-                              <div class="bg-[#F4F4F4] flex items-end sm:items-center mb-[50px]">
+                              <div class=" md:bg-[#F4F4F4] flex items-end sm:items-center md:mb-[50px]">
                                   <h4 class="whitespace-nowrap font-supera600 text-[17px] sm:text-[22px] text-[#363636]">Browse From Here</h4>
-                                  <p class="w-[90%] sm:w-[20%] h-[0.50px] sm:h-[2px] bg-[#898989CC] ml-2"></p>
+                                  <p class="w-[90%] sm:w-[20%] h-[0.50px] sm:h-[2px] md:bg-[#898989CC] ml-2 "></p>
                               </div>
                               <div class="hidden sm:flex justify-start gap-[5px] mt-2 sm:gap-[40px] unit-plan-tabs-bottom ">
                                   <div class="relative cursor-pointer w-[180px] border-[0.94px] border-[#326555] bg-[#F4F4F4] text-white rounded-[7px] flex justify-around items-center transition-all" data-index="0">
@@ -1482,6 +1486,7 @@
                                   src="./public/towerb-lg.png"
                                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
                               />
+                              <div class="w-[50px] h-[50px] bg-[#f4f4f4] absolute flex items-center justify-center top-5 right-5 rounded-[10px]"><img src="./public/expand-icon.svg" alt="" class="object-cover w-[50%] pointer-events-none"></div>
                           </div>
                       </div>
                   </div>
