@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
       switchBg.classList.add("left-[50%]");
             switchBg.classList.remove("left-0");
             switchTo2D.classList.remove("text-[#fff]");
-            switchTo2D.classList.add("text-[#326555]");
-            switchTo3D.classList.remove("text-[#326555]");
+            switchTo2D.classList.add("text-theme");
+            switchTo3D.classList.remove("text-theme");
             switchTo3D.classList.add("text-[#fff]");
     }
   
@@ -73,8 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
       switchBg.classList.add("left-0");
       switchBg.classList.remove("left-[50%]");
       switchTo2D.classList.add("text-[#fff]");
-      switchTo2D.classList.remove("text-[#326555]");
-      switchTo3D.classList.add("text-[#326555]");
+      switchTo2D.classList.remove("text-theme");
+      switchTo3D.classList.add("text-theme");
       switchTo3D.classList.remove("text-[#fff]");
     }
   

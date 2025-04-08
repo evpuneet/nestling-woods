@@ -35,9 +35,9 @@ megaMenuToggle.addEventListener("click", function (event) {
     isMenuOpen = !isMenuOpen;
 
     if (isMenuOpen || window.scrollY > 80) {
-        div3rd.classList.add("bg-[#326555]", "shadow-lg", "translate-y-0");
+        div3rd.classList.add("bg-theme", "shadow-lg", "translate-y-0");
       } else {
-        div3rd.classList.remove("bg-[#326555]", "shadow-lg", "translate-y-0");
+        div3rd.classList.remove("bg-theme", "shadow-lg", "translate-y-0");
       }
 
     // Toggle mega menu dropdowns, etc.
@@ -139,13 +139,13 @@ window.addEventListener("scroll", function () {
         div2nd.classList.add("fixed");
         div2nd.classList.remove("absolute");
     
-        div3rd.classList.add("bg-[#326555]", "shadow-lg", "translate-y-0");
+        div3rd.classList.add("bg-theme", "shadow-lg", "translate-y-0");
       } else {
         // Restore initial styles when scrolled back up AND menu is closed
         div2nd.classList.add("absolute");
         div2nd.classList.remove("fixed");
     
-        div3rd.classList.remove("bg-[#326555]", "shadow-lg", "translate-y-0");
+        div3rd.classList.remove("bg-theme", "shadow-lg", "translate-y-0");
       }
   });
 

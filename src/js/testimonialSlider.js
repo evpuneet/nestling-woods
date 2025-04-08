@@ -1,5 +1,5 @@
 const testswiper = new Swiper(".testSwiper", {
-  loop: false,
+  loop: true,
   effect: "fade",
   fadeEffect: { crossFade: true },
   autoplay: { delay: 2500, disableOnInteraction: false },

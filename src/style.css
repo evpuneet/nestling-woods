@@ -1469,3 +1469,35 @@ body #sidebarWrapper {
   width: 100%;
   position: fixed; /* Optional, but ensures scroll is frozen on mobile */
 }
+
+@media (max-width:725px) {
+  .top180{
+    margin-top: 180px !important;
+  }
+}
+
+@media (max-width:725px) {
+  .top150{
+    margin-top: 150px !important;
+  }
+}
+
+.bg-white-theme{
+  background-color: #326555 !important;
+}
+
+@media (max-width:725px) {
+  .bg-white-theme{
+    background-color: white !important;
+  }
+}
+
+.text-white-theme{
+  color: white !important;
+}
+
+@media (max-width:725px) {
+  .text-white-theme{
+    color: #326555 !important;
+  }
+}

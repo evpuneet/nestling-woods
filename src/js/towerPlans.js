@@ -1,10 +1,10 @@
 // Example slide data for Unit Plan Slider
 const towerPlanSlides = [
     {
-      image: "./public/unit-plan-map1.webp",
+      image: "./public/towerb-lg.png",
     },
     {
-      image: "./public/unit-plan-map2.webp",
+      image: "./public/towera-lg.png",
     },
     // {
     //     image: "./public/unit-plan-map2.webp",
