@@ -711,6 +711,12 @@
   .my-\[30px_40px\] {
     margin-block: 30px 40px;
   }
+  .my-\[50\] {
+    margin-block: 50;
+  }
+  .my-\[50px\] {
+    margin-block: 50px;
+  }
   .my-\[60px\] {
     margin-block: 60px;
   }
@@ -2382,6 +2388,9 @@
   }
   .rounded-\[12\.11px\] {
     border-radius: 12.11px;
+  }
+  .rounded-\[12px\] {
+    border-radius: 12px;
   }
   .rounded-\[13px\] {
     border-radius: 13px;
