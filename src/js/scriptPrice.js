@@ -38,19 +38,17 @@ megaMenuToggle.addEventListener("click", function (event) {
         burgerImage.style.display = 'none';
         crossSvgContainer.style.display = 'block';
 
-        
-
-
-        div3rd.classList.toggle("px-5");
-        div3rd.classList.toggle("sm:px-10");
-        div3rd.classList.toggle("md:px-14");
-        div3rd.classList.toggle("lg:px-6");
-        div3rd.classList.toggle("2xl:px-8");
-        div3rd.classList.toggle("3xl:px-4");
-        div3rd.classList.toggle("pt-2");
-        div3rd.classList.toggle("sm:pt-6");
-        div3rd.classList.toggle("lg:py-10");
-        div3rd.classList.toggle("shadow-lg");
+       
+        div3rd.classList.add("px-5");
+        div3rd.classList.add("sm:px-10");
+        div3rd.classList.add("md:px-14");
+        div3rd.classList.add("lg:px-6");
+        div3rd.classList.add("2xl:px-8");
+        div3rd.classList.add("3xl:px-4");
+        div3rd.classList.add("pt-2");
+        div3rd.classList.add("sm:pt-6");
+        div3rd.classList.add("lg:py-10");
+        div3rd.classList.add("shadow-lg");
 
         li_list.forEach(li=>{
             li.classList.remove("font-supera400", "xl:font-supera500", "h-full");
@@ -83,15 +81,16 @@ megaMenuToggle.addEventListener("click", function (event) {
             li.classList.add("font-supera400", "xl:font-supera500", "h-full");
             li.classList.remove("font-supera500", "xl:font-supera600", "xl:w-1/6", "flex", "justify-center", "h-full");
             // div3rd.classList.toggle("px-5");
-            div3rd.classList.toggle("sm:px-10");
-            div3rd.classList.toggle("md:px-14");
-            div3rd.classList.toggle("lg:px-6");
-            div3rd.classList.toggle("2xl:px-8");
-            div3rd.classList.toggle("3xl:px-4");
-            div3rd.classList.toggle("pt-2");
-            div3rd.classList.toggle("sm:pt-6");
-            div3rd.classList.toggle("lg:py-10");
-            div3rd.classList.toggle("shadow-lg");
+            div3rd.classList.remove("px-5");
+            div3rd.classList.remove("sm:px-10");
+            div3rd.classList.remove("md:px-14");
+            div3rd.classList.remove("lg:px-6");
+            div3rd.classList.remove("2xl:px-8");
+            div3rd.classList.remove("3xl:px-4");
+            div3rd.classList.remove("pt-2");
+            div3rd.classList.remove("sm:pt-6");
+            div3rd.classList.remove("lg:py-10");
+            div3rd.classList.remove("shadow-lg");
 
             
             navUl.classList.add("2xl:justify-between");

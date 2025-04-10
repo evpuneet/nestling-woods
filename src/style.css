@@ -1026,7 +1026,7 @@ overflow: hidden;
 /* For larger screens (1024px and above) */
 @media (min-width: 1024px) {
   .bg-mohali-shadow {
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 0%);
   }
 }
 
@@ -1486,7 +1486,7 @@ body #sidebarWrapper {
   background-color: #326555 !important;
 }
 
-@media (max-width:725px) {
+@media (min-width:725px) {
   .bg-white-theme{
     background-color: white !important;
   }
@@ -1496,7 +1496,7 @@ body #sidebarWrapper {
   color: white !important;
 }
 
-@media (max-width:725px) {
+@media (min-width:725px) {
   .text-white-theme{
     color: #326555 !important;
   }
