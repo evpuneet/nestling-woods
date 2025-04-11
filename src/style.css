@@ -1501,3 +1501,13 @@ body #sidebarWrapper {
     color: #326555 !important;
   }
 }
+
+.plan-h{
+  height: 100vh !important;
+}
+
+@media (min-width:725px) {
+  .plan-h{
+    height: 60vh !important;
+  }
+}
