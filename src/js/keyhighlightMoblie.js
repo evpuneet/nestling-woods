@@ -5,27 +5,27 @@ const slides = [
     text: "Earn a steady income from your investment with assured rental income of ₹25,000 per month for Studio Apartments and ₹32,000 per month for 1 BHK apartments post-possession. A hassle-free way to generate income from your second home"
   },
   {
-    image: "./public/key-high-mob02.png", 
+    image: "./public/key-high-mob03.png", 
     title: "15 Days Complimentary Stay at Stonewood Hotels",
     text: " As an owner, you get 15 days of complimentary stay every year at any of the Stonewood Hotels properties across India. Enjoy luxury stays at prime destinations, making your investment not just a home, but a getaway too."
   },
   {
-    image: "./public/key-high-mob03.png",
+    image: "./public/key-high-mob05.png",
     title: "Fully Furnished Luxury Apartments",
     text: "Each unit at Nestling Woods comes fully furnished, providing a ready-to-move-in experience. Designed with comfort and luxury in mind, these apartments are perfect for those seeking a high-end vacation home or second home in the hills"
   },
   {
     image: "./public/key-high-mob04.png",
     title: "Premium Amenities & Clubhouse",
-    text: "Each unit at Nestling Woods comes fully furnished, providing a ready-to-move-in experience. Designed with comfort and luxury in mind, these apartments are perfect for those seeking a high-end vacation home or second home in the hills"
+    text: "Enjoy world-class amenities, including a 12,000 sq. ft. clubhouse with a heated swimming pool, gym, spa, meditation center, kids play area, and more. Nestling Woods ensures a lifestyle of luxury and convenience."
   },
   {
-    image: "./public/key-high-mob05.png", 
+    image: "./public/key-high-mob06.png", 
     title: "Exclusive Location with Panoramic Hill Views",
     text: "Nestling Woods is located at 5000 feet above sea level, offering stunning panoramic views of the surrounding hills. Enjoy the serenity and beauty of the Himalayas right from your window or balcony."
   },
   {
-    image: "./public/key-high-mob06.png",
+    image: "./public/key-high-mob05.png",
     title: "Strong Resale Value - Limited Units",
     text: "Invest in a property with strong resale potential. Limited units & high demand ensure long-term appreciation in Kasauli's exclusive market. Secure your financial future."
   }
