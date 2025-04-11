@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
           name: "Extended Balcony",
           types: [
             { 
-              image: './public/s1a1t1.png',
+              image: './public/s1a2t1.png',
               heading: 'Studio apartment with extended balcony - corner unit',
               SuperArea: '881.24',
               CarpetArea: '400.10',
@@ -133,7 +133,23 @@ function updateCombinationButtons() {
     balconyArea.textContent = `${currentTypeData.BalconyArea} ${currentTypeData.unit}`;
     otherArea.textContent = `${currentTypeData.OtherArea} ${currentTypeData.unit}`;
 
+    // Update area buttons text and visibility
+    function updateAreaButtons() {
+      const currentAreas = slidesData[currentSlide].areas;
+      areaBtns.forEach((btn, index) => {
+        if (index < currentAreas.length) {
+          const area = currentAreas[index];
+          // Show Super Area from the first type instead of area name
+          btn.textContent = `${area.types[0].SuperArea} ${area.types[0].unit}`;
+          btn.style.display = 'flex';
+        } else {
+          btn.style.display = 'none';
+        }
+      });
+    }
+
     // Update UI states
+    updateAreaButtons()
     updateCombinationButtons();
     updateUnitPlanActiveTab();
     updateUnitPlanActiveIndicator();
