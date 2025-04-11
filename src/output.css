@@ -7529,6 +7529,11 @@
       height: 500px;
     }
   }
+  .lg\:h-\[550px\] {
+    @media (width >= 64rem) {
+      height: 550px;
+    }
+  }
   .lg\:h-\[570px\] {
     @media (width >= 64rem) {
       height: 570px;
@@ -8198,6 +8203,11 @@
     @media (width >= 64rem) {
       --tw-leading: var(--leading-snug);
       line-height: var(--leading-snug);
+    }
+  }
+  .xl\:relative {
+    @media (width >= 80rem) {
+      position: relative;
     }
   }
   .xl\:top-\[115\%\] {
