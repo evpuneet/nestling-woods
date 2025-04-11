@@ -64,10 +64,33 @@ let currentArea = 0;
 let currentType = 0;
 
 const areaBtns = document.querySelectorAll('.area-btn');
-const typeBtns = document.querySelectorAll('.type-btn');
 const mainImage = document.getElementById('unit-plan-slide-image');
 const heading = document.getElementById('unit-plan-slide-heading');
 const combinationBtns = document.querySelectorAll('.combination-btn');
+
+// Function to update combination buttons
+function updateCombinationButtons() {
+  combinationBtns.forEach((btn, areaIndex) => {
+      const slideData = slidesData[unitPlanCurrentSlide];
+      const areaData = slideData.areas[areaIndex];
+      const typeData = areaData.types[0]; // First type
+
+      // Update button data attributes
+      btn.dataset.slide = unitPlanCurrentSlide;
+      btn.dataset.area = areaIndex;
+      btn.dataset.type = 0;
+
+      // Update visual elements
+      const img = btn.querySelector('img');
+      const typeElement = btn.querySelector('#unit-plan-mini-type');
+      const priceElement = btn.querySelector('#unit-plan-mini-price');
+
+      if (img) img.src = typeData.image;
+      if (typeElement) typeElement.textContent = unitPlanSlides[unitPlanCurrentSlide].type;
+      if (priceElement) priceElement.textContent = unitPlanSlides[unitPlanCurrentSlide].price + " Sq.Ft";
+  });
+}
+
 
 // Function to update slide content
 function updateUnitPlanSlide(index) {
@@ -88,6 +111,8 @@ function updateUnitPlanSlide(index) {
   });
   
 
+  // Update combination buttons
+  updateCombinationButtons();
   updateUnitPlanActiveTab();
   updateUnitPlanActiveIndicator();
 }
@@ -129,27 +154,24 @@ function updateUnitPlanActiveTab() {
     btn.classList.toggle('text-theme', index !== currentArea);
   });
 
-  // Update type buttons
-  typeBtns.forEach((btn, index) => {
-      btn.classList.toggle('bg-theme', index === currentType);
-      btn.classList.toggle('text-white', index === currentType);
-      btn.classList.toggle('bg-white', index !== currentType);
-      btn.classList.toggle('text-theme', index !== currentType);
-  });
-
-  // Update combination buttons
+  // Update combination button states
   combinationBtns.forEach(btn => {
-    const isActive = parseInt(btn.dataset.slide) === unitPlanCurrentSlide &&
-                 parseInt(btn.dataset.area) === currentArea &&
-                 parseInt(btn.dataset.type) === currentType;
+    const isActive = parseInt(btn.dataset.area) === currentArea;
     btn.classList.toggle('bg-theme', isActive);
     btn.classList.toggle('bg-white', !isActive);
-    });
+});
+
+
+
+   
+
 
   // Update content
   const currentData = slidesData[unitPlanCurrentSlide].areas[currentArea].types[currentType];
   mainImage.src = currentData.image;
   heading.textContent = currentData.heading;
+
+  
 }
 
 
@@ -175,25 +197,6 @@ function updateUnitPlanActiveTab() {
     });
   });
 
-  typeBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-          currentType = parseInt(btn.dataset.type);
-          updateUnitPlanActiveTab();
-      });
-  });
-
-  // Add event listeners for combination buttons
-  combinationBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      unitPlanCurrentSlide = parseInt(btn.dataset.slide, 10);
-      const index = parseInt(btn.dataset.index, 10);
-        currentArea = parseInt(btn.dataset.area);
-        currentType = parseInt(btn.dataset.type);
-        updateUnitPlanActiveTab(index);
-        updateUnitPlanActiveIndicator(); 
-    });
-  });
-
   // Tab click events
   document.querySelectorAll(".unit-plan-tabs-bottom>div").forEach((div) => {
       div.addEventListener("click", () => {
@@ -215,6 +218,15 @@ function updateUnitPlanActiveTab() {
       const newIndex = (unitPlanCurrentSlide + 1) % unitPlanSlides.length;
       updateUnitPlanSlide(newIndex);
   })});
+
+  // Proper combination button click handler
+  combinationBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        currentArea = parseInt(btn.dataset.area);
+        currentType = parseInt(btn.dataset.type);
+        updateUnitPlanActiveTab();
+    });
+});
 
   
 
