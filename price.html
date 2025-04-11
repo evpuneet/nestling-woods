@@ -670,7 +670,7 @@
           <div class="hidden sm:block w-full h-[90vh] bg-price bg-cover bg-bottom bg-no-repeat mt-[70px]">
               <div class="w-full h-full flex justify-center flex-col items-center relative bg-[linear-gradient(90.47deg,_rgba(0,_0,_0,_0)_-11.87%,_rgba(7,_7,_7,_0.5)_35.31%)]">
                   <div class="w-full h-[20%] absolute top-0 left-0 bg-[linear-gradient(180deg,_#00000080_14.24%,_#00000000_79.76%)]"></div>
-                  <h1 class="px-4 lg:px-0 font-supera600 text-3xl xs:text-4xl md:text-4xl 2xl:text-6xl leading-tight tracking-[0.4px] capitalise text-center text-[#FFFFFF] w-full max-w-[1200px]">Choose Your Perfect Space: <br/>
+                  <h1 class="px-4 lg:px-0 font-supera600 text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl leading-tight tracking-[0.4px] capitalise text-center text-[#FFFFFF] w-full max-w-[1200px]">Choose Your Perfect Space: <br/>
                     Studio & 1 BHK Apartments</h1>
                     <p class="text-center font-supera500  text-[14px] md:text-[24px] text-white capitalize tracking-wide mt-[8px] md:mt-[16px]">
                 Maximize your investment with our assured rental income <br/>
@@ -710,23 +710,27 @@
                               />
                           </div>
                       </div>
-                      <div class="bg-theme duration-1000 w-[44%] pl-[8px] md:pl-[12px] py-2 flex flex-col justify-center items-start h-full">
-                          <h3 class="text-[#fff] duration-1000 font-supera700 text-[22px] uppercase mr-1 lg:pl-3">Studio</h3>
-                          <div class="text-[#fff] duration-1000 mt-1 font-supera700 text-[16px] uppercase lg:pl-3">706.93 sq.ft.</div>
-                          <p class="text-[#fff] duration-1000 mt-[9px] px-1 lg:px-3 font-supera500 text-[16px] 2xl:text-[13px] capitalize overflow-y-auto scroll-m-8">
+                      <div class="bg-white duration-1000 w-[44%] pl-[8px] md:pl-[12px] py-2 flex flex-col justify-center items-start h-full">
+                          <h3 class="text-theme duration-1000 font-supera700 text-[22px] uppercase mr-1 lg:pl-3">Studio</h3>
+                          <div class="text-theme duration-1000 mt-1 font-supera700 text-[16px] uppercase lg:pl-3">706.93 sq.ft.</div>
+                          <p class="text-black duration-1000 mt-[9px] px-1 lg:px-3 font-supera500 text-[16px] 2xl:text-[13px] capitalize overflow-y-auto scroll-m-8">
                             Stylish studio apartment in Kasauli. Perfect for a second home or a smart real estate investment near Chandigarh.
                           </p>
                       </div>
                       <div class="w-[18%] cursor-pointer rounded-[5px] rounded-r-[10px] overflow-hidden openModalBtn" data-title="View Price Sheet">
-                          <div class="relative w-full h-full">
-                              <div class="w-full h-full flex flex-col justify-center items-center bg-backgroud-theme-local bg-cover">
+                          <div class="relative w-full h-full ">
+                              <div class="w-full h-full flex flex-col justify-center items-center bg-backgroud-theme-local bg-cover hidden">
                                 <p class="font-poppins font-black text-[15px] lg:text-[17px] text-black mt-2">Company Price</p>
                                 <h6 class="font-poppins font-black text-[15px] lg:text-[27px] text-black mb-[15px] relative line-through decoration-red-500">₹ 68,57,221<h6>
                                 <p class="font-poppins font-thin text-[15px] lg:text-[17px] text-black">our  Price</p>
                                 <h6 class="font-poppins font-[900] text-[15px] lg:text-[32px] whitespace-nowrap capitalize text-black">₹ 67.15 lakhs*</h6>
                                 <p style="writing-mode: vertical-rl;" class="font-poppins font-black text-[4px] lg:text-[4px] text-[#fff] absolute right-[35px]">T&C Apply </p>
                               </div>
-                              <div class="w-full h-full absolute top-0 right-0 translate-x-[96%] duration-500 z-20 ">
+                              <div class="w-full h-full flex flex-col justify-center items-center gap-3 bg-theme">
+                                <img src="./public/lock_white.svg" class="w-[35px]  mt-3"/>
+                                <h6 class="font-poppins font-black text-[20px] lg:text-[35px] text-white relative">Unlock<h6>
+                              </div>
+                              <div class="w-full h-full absolute top-0 right-0 translate-x-[96%] duration-500 z-20 bg-backgroud-theme-local bg-cover">
                                   <div class="w-full h-[40%] flex justify-center">
                                       <div class="flex flex-col lg:flex-col items-center justify-center gap-y-1 lg:gap-y-1 gap-x-3.5 capitalize font-supera600 text-theme text-[16px] tracking-wide">
                                           Company price
@@ -769,7 +773,7 @@
                           Stylish studio apartment in Kasauli. Perfect for a second home or a smart real estate investment near Chandigarh.
                         </p>
                     </div>
-                    <div class="w-full mt-5 relative rounded-[10px]">
+                    <div class="w-full mt-5 relative rounded-[10px] hidden">
                         <div
                             class="scale-100 duration-300 group text-[#fff] lg:text-[31px] text-[18px] hover:text-white font-poppins font-semibold overflow-hidden text-center capitalize flex justify-center items-center rounded-[5.19px] px-7 lg:px-16 py-4 gap-2 w-full bg-yellow-gradient"
                         >
@@ -805,7 +809,19 @@
                                 <p class="rotate-0 tracking-wide font-poppins font-medium text-[6px] text-theme">T&amp;C Apply</p>
                             </div>
                         </div>
+                        
                     </div>
+                    <div class="w-full mt-5 relative rounded-[10px] ">
+                      <div data-title="View Price Sheet"
+                    class="scale-100 duration-300 group text-[#fff] lg:text-[31px] text-[18px] hover:text-white font-poppins font-semibold overflow-hidden text-center capitalize flex justify-center items-center rounded-[5.19px] px-7 lg:px-16 py-4 gap-2 w-full bg-yellow-gradient openModalBtn">
+                    <span>
+                        <img src="./public/lock_white.svg" alt="Price Sheet" class="w-[18px] h-[23px] object-cover" />
+                    </span>
+                    <h3 class="text-white font-supera700 text-[18px]">Unlock Price</h3>
+                  </div>
+                    </div>
+                    
+
                   </div>
                 </div>
                 <div>

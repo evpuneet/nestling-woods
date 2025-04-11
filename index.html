@@ -1656,8 +1656,7 @@
                         top: 0;
                         right: 0;
                         bottom: 0;
-                        color: transparent;
-                      "
+                        color: transparent;"
                       sizes="100vw"
                       src="./public/key-highlight3.png"
                     />
@@ -2086,21 +2085,18 @@
                   <div class="cursor-pointer absolute top-1.5  lg:top-5 right-[105%] lg:right-[50px] xl:right-[50px] z-40 font-supera700 ">
                     <div class="size-[35px] relative">
                         <div class="float-right">
-                            <div class="size-[35px] rotate-0 duration-100">
-                                <button aria-label="share" class=" ">
-                                    <img
-                                        alt="share"
-                                        loading="lazy"
-                                        decoding="async"
-                                        data-nimg="fill"
-                                        sizes="100vw"
-                                        class="cursor-pointer"
-                                        src="./public/shareicon.webp"
-                                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                                    />
-                                </button>
-                            </div>
-                            <ul class="social mt-4 list-none p-0 m-0 duration-100 hidden opacity-0 invisible translate-x-[150%] translate-y-[3rem]">
+                          <div class="size-[35px] rotate-0 duration-100 relative">
+                            <button id="shareButton" aria-label="share" class="focus:outline-none">
+                                <img
+                                    alt="share"
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="cursor-pointer w-full h-full"
+                                    src="./public/shareicon.webp"
+                                />
+                            </button>
+                        </div>
+                        <ul id="socialMenu" class="social mt-4 list-none p-0 m-0 duration-100 opacity-0 invisible translate-x-[150%] translate-y-[3rem] absolute">
                                 <li class="mb-4">
                                     <button quote="3+1 BHK Apartments" class="react-share__ShareButton" style="background-color: transparent; border: none; padding: 0px; font: inherit; color: inherit; cursor: pointer;">
                                         <svg viewBox="0 0 64 64" width="40" height="40">
@@ -6426,6 +6422,56 @@
 <script src="./src/js/readMore.js"></script>
 <script src="./src/js/copyright.js"></script>
 
+<script>
+  // Toggle social menu visibility
+  const shareButton = document.getElementById('shareButton');
+  const socialMenu = document.getElementById('socialMenu');
+
+  shareButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      socialMenu.classList.toggle('opacity-0');
+      socialMenu.classList.toggle('invisible');
+      socialMenu.classList.toggle('translate-x-[150%]');
+      socialMenu.classList.toggle('translate-y-[3rem]');
+      socialMenu.classList.toggle('!opacity-100');
+      socialMenu.classList.toggle('!visible');
+      socialMenu.classList.toggle('translate-x-0');
+      socialMenu.classList.toggle('translate-y-0');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+      if (!socialMenu.contains(e.target) && !shareButton.contains(e.target)) {
+          socialMenu.classList.add('opacity-0', 'invisible', 'translate-x-[150%]', 'translate-y-[3rem]');
+          socialMenu.classList.remove('!opacity-100', '!visible', 'translate-x-0', 'translate-y-0');
+      }
+  });
+
+  // Share functionality
+  function shareOnPlatform(platform) {
+      const currentURL = encodeURIComponent(window.location.href);
+      const quote = encodeURIComponent(document.querySelector('[quote]').getAttribute('quote') || '');
+      
+      const urls = {
+          facebook: `https://www.facebook.com/sharer/sharer.php?u=${currentURL}&quote=${quote}`,
+          twitter: `https://twitter.com/intent/tweet?text=${quote}&url=${currentURL}`,
+          linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`,
+          whatsapp: `https://api.whatsapp.com/send?text=${quote}%20${currentURL}`
+      };
+
+      if (urls[platform]) {
+          window.open(urls[platform], '_blank', 'width=600,height=400');
+      }
+  }
+
+  // Attach click handlers to social buttons
+  document.querySelectorAll('.react-share__ShareButton').forEach(button => {
+      button.addEventListener('click', (e) => {
+          const platform = Array.from(e.currentTarget.querySelector('title').textContent.toLowerCase());
+          shareOnPlatform(platform);
+      });
+  });
+</script>
 
 <script>
   document.querySelectorAll('.faq-btn').forEach(button => {

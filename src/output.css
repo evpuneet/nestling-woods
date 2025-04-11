@@ -234,6 +234,9 @@
   .pointer-events-none {
     pointer-events: none;
   }
+  .\!visible {
+    visibility: visible !important;
+  }
   .collapse {
     visibility: collapse;
   }
@@ -1690,6 +1693,10 @@
   }
   .-translate-x-\[50\%\] {
     --tw-translate-x: calc(50% * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-0 {
+    --tw-translate-x: calc(var(--spacing) * 0);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-x-\[-50\%\] {
@@ -5129,6 +5136,12 @@
           transition-duration: 500ms;
         }
       }
+    }
+  }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
     }
   }
   .sm\:top-0 {
