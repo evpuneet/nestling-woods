@@ -1256,6 +1256,9 @@
   .h-\[600px\] {
     height: 600px;
   }
+  .h-\[650px\] {
+    height: 650px;
+  }
   .h-\[710px\] {
     height: 710px;
   }
@@ -3726,9 +3729,17 @@
     --tw-leading: 28px;
     line-height: 28px;
   }
+  .leading-\[30px\] {
+    --tw-leading: 30px;
+    line-height: 30px;
+  }
   .leading-\[32px\] {
     --tw-leading: 32px;
     line-height: 32px;
+  }
+  .leading-\[35px\] {
+    --tw-leading: 35px;
+    line-height: 35px;
   }
   .leading-\[40px\] {
     --tw-leading: 40px;
