@@ -1493,6 +1493,9 @@
   .w-\[400px\] {
     width: 400px;
   }
+  .w-\[800px\] {
+    width: 800px;
+  }
   .w-\[calc\(100\%\+26px\)\] {
     width: calc(100% + 26px);
   }
@@ -7056,6 +7059,11 @@
       font-size: 45px;
     }
   }
+  .md\:text-\[50px\] {
+    @media (width >= 48rem) {
+      font-size: 50px;
+    }
+  }
   .md\:text-\[58px\] {
     @media (width >= 48rem) {
       font-size: 58px;
@@ -7097,6 +7105,11 @@
   .md\:text-\[\#787878\] {
     @media (width >= 48rem) {
       color: #787878;
+    }
+  }
+  .md\:text-\[px\] {
+    @media (width >= 48rem) {
+      color: px;
     }
   }
   .md\:text-white {
@@ -7482,6 +7495,11 @@
       width: 68%;
     }
   }
+  .lg\:w-\[70px\] {
+    @media (width >= 64rem) {
+      width: 70px;
+    }
+  }
   .lg\:w-\[135px\] {
     @media (width >= 64rem) {
       width: 135px;
@@ -7525,6 +7543,11 @@
   .lg\:w-\[500px\] {
     @media (width >= 64rem) {
       width: 500px;
+    }
+  }
+  .lg\:w-\[700px\] {
+    @media (width >= 64rem) {
+      width: 700px;
     }
   }
   .lg\:w-\[800px\] {
@@ -8363,6 +8386,11 @@
       line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
+  .xl\:text-\[0px\] {
+    @media (width >= 80rem) {
+      font-size: 0px;
+    }
+  }
   .xl\:text-\[13px\] {
     @media (width >= 80rem) {
       font-size: 13px;
@@ -8423,9 +8451,19 @@
       font-size: 36px;
     }
   }
+  .xl\:text-\[40px\] {
+    @media (width >= 80rem) {
+      font-size: 40px;
+    }
+  }
   .xl\:text-\[55px\] {
     @media (width >= 80rem) {
       font-size: 55px;
+    }
+  }
+  .xl\:text-\[70px\] {
+    @media (width >= 80rem) {
+      font-size: 70px;
     }
   }
   .xl\:text-\[80px\] {
@@ -8436,6 +8474,11 @@
   .xl\:text-\[85px\] {
     @media (width >= 80rem) {
       font-size: 85px;
+    }
+  }
+  .xl\:text-\[400px\] {
+    @media (width >= 80rem) {
+      font-size: 400px;
     }
   }
   .xl\:leading-\[38px\] {
