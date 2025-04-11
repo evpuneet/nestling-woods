@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // DOM Elements
   const mainImage = document.getElementById('unit-plan-slide-image');
   const heading = document.getElementById('unit-plan-slide-heading');
+  const areaHeading = document.getElementById('unit-plan-slide-area');
   const areaBtns = document.querySelectorAll('.area-btn');
   const combinationBtns = document.querySelectorAll('.combination-btn');
   const superArea = document.getElementById("unit-plan-slide-SuperArea");
@@ -126,6 +127,7 @@ function updateCombinationButtons() {
     // Update main image and heading
     mainImage.src = currentTypeData.image;
     heading.innerHTML  = currentTypeData.heading;
+    areaHeading.textContent = `${currentTypeData.SuperArea} ${currentTypeData.unit}`;
 
     // Update measurements
     superArea.textContent = `${currentTypeData.SuperArea} ${currentTypeData.unit}`;
