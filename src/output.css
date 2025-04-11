@@ -1493,6 +1493,9 @@
   .w-\[calc\(100\%\+26px\)\] {
     width: calc(100% + 26px);
   }
+  .w-\[px\] {
+    width: px;
+  }
   .w-full {
     width: 100%;
   }
