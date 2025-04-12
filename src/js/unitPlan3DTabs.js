@@ -32,7 +32,7 @@ const unitPlanSlides3d = [
   },
   {
     image: "./public/Bathroom.png",
-    heading: "Master Bathroom",
+    heading: "Bathroom",
     sub1: "Elegant King Bed",
     para1: "Relax in a roomy, plush bed dressed with premium linens for restful nights.",
     sub2: "Expansive Walk-In Closet",

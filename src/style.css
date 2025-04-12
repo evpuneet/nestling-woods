@@ -1518,6 +1518,6 @@ body #sidebarWrapper {
 
 @media (min-width:769px) {
   .top190{
-    margin: 190px !important;
+    margin-top: 250px !important;
   }
 }
