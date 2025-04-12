@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           types: [
             { 
               image: './public/s1a2t1.png',
-              heading: 'Studio apartment with extended balcony - corner unit',
+              heading: 'EXCLUSIVE Studio apartment with extended balcony - corner unit',
               SuperArea: '881.24',
               CarpetArea: '400.10',
               BalconyArea: "232.197",
