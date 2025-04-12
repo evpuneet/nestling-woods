@@ -1,6 +1,6 @@
 const button = document.getElementById('toggleButtonProjectStatus');
         const parentDiv = document.getElementById('parentDivProjectStatus');
-        const hiddenDivs = parentDiv.querySelectorAll('[data-index]:nth-child(n+12)');
+        const hiddenDivs = parentDiv.querySelectorAll('[data-index]:nth-child(n+9)');
         
         let isExpanded = false;
 
