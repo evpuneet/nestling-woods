@@ -448,7 +448,7 @@
               </button>
               
             </div>
-            <div class="mt-[-0.5px] shadow-xl shadow-[#00000039] absolute top-full w-full md:w-[55%] px-2 sm:rounded-b-2xl lg:rounded-b-3xl backdrop-blur-md bg-nav-theme overflow-auto">
+            <div class="mt-[-0.5px] shadow-xl shadow-[#00000039] absolute top-[105%] md:top-full w-full md:w-[55%] px-2 sm:rounded-b-2xl lg:rounded-b-3xl backdrop-blur-md bg-nav-theme overflow-auto">
               <ul class="my-3.5 sm:my-2 lg:my-3 flex justify-between md:justify-evenly gap-x-3 sm:gap-x-0 nav-menu-plan backdrop-blur-md">
                   <li data-target="plan"
                       class="min-w-[100px] md:min-w-[130px] px-4 sm:px-6 py-1.5 inline-flex justify-center rounded-lg whitespace-nowrap font-supera700 text-sm md:text-[13px] md:text-sm lg:text-xl text-center tracking-wide uppercase text-nav-theme sm:bg-inherit sm:duration-1000 bg-no-repeat bg-cover bg-center nav-item-plan"
@@ -727,9 +727,9 @@
                           </svg>
                       </button>
                       <!-- tabs top-left parent div-->
-                      <div id="plan-start" class="w-full flex-col sm:flex-row flex justify-between items-start bxxs:items-center lg:px-5">
+                      <div id="plan-start" class="w-full flex-col sm:flex-row flex justify-between gap-3 md:gap-0 items-start bxxs:items-center lg:px-5">
                           <!-- tabs top-left div-->
-                          <div class="pt-2 xs:pt-0 w-full sm:w-auto">
+                          <div class="pt-2 xs:pt-0 w-[80%] md:w-full">
                               <!-- opacity should be zero in 3d -->
                               <div id="tabs2d" class="w-full opacity-100 duration-500 relative z-20 flex self-start justify-between sm:justify-center items-center gap-1.5 xs:gap-3 md:gap-5 border-b-[2px] sm:border-none border-[#D9D9D9] unit-plan-tabs-top">
                                   <div
@@ -744,17 +744,17 @@
                               </div>
                           </div>
                           <!--2d/3d tabs top-right div-->
-                          <div id="switch2d3d" class="self-start bxxs:self-start mt-4 xs:mt-5 sm:mt-0 mb-0.5 sm:mb-0 w-[170px] h-[33px] md:h-[42px] border-[1.07px] rounded-[7px] sm:rounded-[10px] border-[#326555] overflow-hidden relative flex justify-center">
+                          <div id="switch2d3d" class="self-start bxxs:self-start mt-4 xs:mt-5 sm:mt-0 mb-0.5 sm:mb-0 w-[100px] md:w-[170px] h-[33px] md:h-[42px] border-[1.07px] rounded-[7px] sm:rounded-[10px] border-[#326555] overflow-hidden relative flex justify-center">
                             <!-- 2D View -->
                             <div id="switchto2d"
                                 class="w-1/2 h-full text-[#fff] px-2 sm:px-0 cursor-pointer relative z-30 font-supera600 sm:font-supera500 text-[13px] sm:text-[14px] md:text-[15px] capitalize tracking-wide text-center flex items-center justify-center">
-                                2D View
+                                2D <span class="hidden md:block"> View</span>
                             </div>
                             
                             <!-- 3D View -->
                             <div id="switchto3d"
                                 class="w-1/2 h-full text-theme px-2 sm:px-0 cursor-pointer relative z-30 font-supera600 sm:font-supera500 text-[13px] sm:text-[14px] md:text-[15px] capitalize tracking-wide text-center flex items-center justify-center">
-                                3D View
+                                3D <span class="hidden md:block"> View</span>
                             </div>
                         
                             <!-- Moving Background (Slider) -->
@@ -762,7 +762,7 @@
                         </div>
                       </div>
                       <!-- on 3d opacity should be 0 also z-index -->
-                      <div id="main2dskeleton" class="h-full opacity-100 duration-500 w-full relative z-0 flex items-start">
+                      <div id="main2dskeleton" class="h-full opacity-100 duration-500 w-full relative z-0 flex items-start mt-6">
                           <div class="w-full h-[100%] 3xl:h-full flex flex-col sm:flex-row items-center justify-center sm:justify-between py-1 lg:py-4 px-1 sm:px-4">
                             <div class="w-[50px] h-[50px] bg-[#f4f4f4] absolute flex items-center justify-center top-0 right-0 rounded-[10px] md:hidden pointer-events-none">
                               <img src="./public/expand-icon.svg" alt="" class="object-cover w-[50%] pointer-events-none">
@@ -1235,7 +1235,7 @@
                                   <span class="pr-1 font-supera600">5&nbsp;</span>Gazebo
                               </li>
                               <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
-                                  <span class="pr-1 font-supera600">6&nbsp;</span>Fire Tender Entry - Exit
+                                  <span class="pr-1 font-supera600">6&nbsp;</span>Sun View Point
                               </li>
                               <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
                                   <span class="pr-1 font-supera600">7&nbsp;</span>Palm Grove
@@ -1250,13 +1250,13 @@
                                   <span class="pr-1 font-supera600">10&nbsp;</span>Yoga Deck
                               </li>
                               <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
-                                  <span class="pr-1 font-supera600">11&nbsp;</span>Walking & Cycling track
+                                  <span class="pr-1 font-supera600">11&nbsp;</span>Sky Bridge
                               </li>
                               <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
                                   <span class="pr-1 font-supera600">12&nbsp;</span>sports Corner
                               </li>
                               <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
-                                  <span class="pr-1 font-supera600">13&nbsp;</span>Badminton Court
+                                  <span class="pr-1 font-supera600">13&nbsp;</span>Sit out Area 
                               </li>
                               <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
                                   <span class="pr-1 font-supera600">14&nbsp;</span>Outdoor Gym
@@ -1265,7 +1265,7 @@
                                   <span class="pr-1 font-supera600">15&nbsp;</span>Clubhouse
                               </li>
                               <li class="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex">
-                                  <span class="pr-1 font-supera600">16&nbsp;</span>Basement Entry
+                                  <span class="pr-1 font-supera600">16&nbsp;</span>Parking
                               </li>                             
                           </ol>
                       </div>
@@ -1932,7 +1932,7 @@
             <div class="w-full md:py-4 space-y-1.5">
               <div class="w-full">
                 <div
-                  class="flex items-center gap-4 w-[90%] mx-auto rounded-2xl bg-green-fade pl-5 pr-2 cxs:px-8 py-4"
+                  class="flex items-center gap-4 w-[90%] mx-auto rounded-2xl bg-green-fade pl-5 pr-2 cxs:px-8 py-2"
                 >
                   <div
                     class="md:absolute bottom-[160%] lg:bottom-[135%] 2xl:bottom-[130%] min-w-[50px] min-h-[50px] sm:min-w-[55px] sm:min-h-[55px] bg-yellow-main rounded-full border-[1.5px] border-[#fff] flex justify-center items-center"
@@ -1952,7 +1952,7 @@
                   <a
                     href="tel:+91 96973 00066"
                     aria-label="call 1"
-                    class="font-supera500 no-underline tracking-wider text-[20px] md:text-[25px] text-white xs:pl-1 cxs:pl-2"
+                    class="font-supera500 no-underline tracking-wider text-[15px] md:text-[25px] text-white xs:pl-1 cxs:pl-2"
                   >
                     +91 89680 66698
                   </a>
@@ -1960,7 +1960,7 @@
               </div>
               <div class="w-full">
                 <div
-                  class="flex items-center gap-4 w-[90%] mx-auto rounded-2xl bg-green-fade pl-5 pr-2 cxs:px-8 py-5"
+                  class="flex items-center gap-4 w-[90%] mx-auto rounded-2xl bg-green-fade pl-5 pr-2 cxs:px-8 py-2"
                 >
                   <div
                     class="md:absolute bottom-[160%] lg:bottom-[135%] 2xl:bottom-[130%] min-w-[50px] min-h-[50px] sm:min-w-[55px] sm:min-h-[55px] bg-yellow-main rounded-full border-[1.5px] border-[#fff] flex justify-center items-center"
@@ -1980,7 +1980,7 @@
                   <a
                     aria-label="call 2"
                     href="tel:+91 96973 00066"
-                    class="font-supera500 no-underline tracking-wider text-[20px] md:text-[25px] text-white xs:pl-1 cxs:pl-2"
+                    class="font-supera500 no-underline tracking-wider text-[15px] md:text-[25px] text-white xs:pl-1 cxs:pl-2"
                   >
                     +91 96973 00066
                   </a>
@@ -1988,7 +1988,7 @@
               </div>
               <div class="w-full">
                 <div
-                  class="flex items-center mx-auto rounded-2xl w-[90%] gap-4 bg-green-fade pl-5 pr-2 cxs:px-8 py-5"
+                  class="flex items-center mx-auto rounded-2xl w-[90%] gap-4 bg-green-fade pl-5 pr-2 cxs:px-8 py-2"
                 >
                   <div
                     class="md:absolute bottom-[265%] lg:bottom-[220%] min-w-[50px] min-h-[50px] sm:min-w-[55px] sm:min-h-[55px] bg-yellow-main rounded-full border-[1.5px] border-[#fff] flex justify-center items-center"
@@ -2009,7 +2009,7 @@
                     <a
                       aria-label="sales@realtynivesh.com"
                       href="mailto:sales@realtynivesh.com"
-                      class="font-supera500 no-underline tracking-wider text-[20px] md:text-[25px] text-white cursor-pointer"
+                      class="font-supera500 no-underline tracking-wider text-[15px] md:text-[25px] text-white cursor-pointer"
                     >
                       sales@realtynivesh.com
                     </a>
@@ -2018,7 +2018,7 @@
               </div>
               <div class="w-full">
                 <div
-                  class="flex items-center mx-auto rounded-2xl w-[90%] gap-4 bg-green-fade pl-5 pr-2 cxs:px-8 py-7"
+                  class="flex items-center mx-auto rounded-2xl w-[90%] gap-4 bg-green-fade pl-5 pr-2 cxs:px-8 py-4"
                 >
                   <div
                     class="md:absolute bottom-[125%] lg:bottom-[110%] min-w-[50px] min-h-[50px] sm:min-w-[55px] sm:min-h-[55px] bg-yellow-main rounded-full border-[1.5px] border-[#fff] flex justify-center items-center"
@@ -2040,7 +2040,7 @@
                       target="_blank"
                       href="https://maps.app.goo.gl/86dZaHXTpHbT4ooK7"
                       ><p
-                        class="font-supera500 no-underline tracking-wider text-[20px] md:text-[25px] text-white cursor-pointer"
+                        class="font-supera500 no-underline tracking-wider text-[13px] md:text-[25px] text-white cursor-pointer"
                       >
                         Showroom No. 12 level 2, Uptown insignia PR-7 Airport
                         Road, Zirakpur, Punjab
