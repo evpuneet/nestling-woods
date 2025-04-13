@@ -1502,6 +1502,16 @@ body #sidebarWrapper {
   }
 }
 
+.text-white-theme-para{
+  color: white !important;
+}
+
+@media (min-width:769px) {
+  .text-white-theme-para{
+    color: #5a5a5a !important;
+  }
+}
+
 .plan-h{
   height: 100vh !important;
 }
