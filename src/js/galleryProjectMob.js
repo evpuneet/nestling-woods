@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const h2Tag = document.querySelector("#project-walk-through h2");
 
     // Save the original text.
-    const originalText = h2Tag.textContent;
+    // const originalText = h2Tag.textContent;
     
     // Define the text for mobile screens.
     const mobileText = "gallery";
