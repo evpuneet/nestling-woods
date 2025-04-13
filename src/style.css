@@ -1538,3 +1538,7 @@ body #sidebarWrapper {
 .fancybox-caption__body{
   display: none;
 }
+
+.bg-thankyou{
+  background: url("/public/thankyouBg.png") center/cover;
+}

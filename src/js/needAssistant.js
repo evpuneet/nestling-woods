@@ -1,201 +1,129 @@
-// // Add this JavaScript
-//   const trigger = document.getElementById('menuTrigger');
-//   const menu = document.getElementById('radialMenu');
-
-//   trigger.addEventListener('click', () => {
-//     menu.classList.toggle('!left-0');
-//     menu.classList.toggle('!opacity-100');
-//   });
-
-//   // Optional: Close menu when clicking outside
-//   menu.addEventListener('click', (e) => {
-//     if(e.target === menu) {
-//       menu.classList.remove('!left-0', '!opacity-100');
-//     }
-//   });
-
-
-// const trigger = document.getElementById('menuTrigger');
-//   const menu = document.getElementById('radialMenu');
-
-//   // Toggle menu with animations
-//   function toggleMenu() {
-//     const isOpening = !menu.classList.contains('!opacity-100');
-    
-//     // Rotate trigger
-//     trigger.classList.toggle('rotate-90');
-    
-//     // Toggle menu visibility
-//     menu.classList.toggle('!left-0');
-//     menu.classList.toggle('!opacity-100');
-//     menu.classList.toggle('pointer-events-auto');
-
-//     // Animate menu items
-//     if (isOpening) {
-//       setTimeout(() => {
-//         document.querySelectorAll('#radialMenu a').forEach((item, index) => {
-//           item.style.transitionDelay = `${index * 100}ms`;
-//           item.classList.add('scale-100', 'opacity-100');
-//         });
-//       }, 50);
-//     } else {
-//       document.querySelectorAll('#radialMenu a').forEach(item => {
-//         item.classList.remove('scale-100', 'opacity-100');
-//         item.style.transitionDelay = '';
-//       });
-//     }
-//   }
-
-//   trigger.addEventListener('click', (e) => {
-//     e.stopPropagation();
-//     toggleMenu();
-//   });
-
-//   // Close menu when clicking outside
-//   document.addEventListener('click', (e) => {
-//     if (!menu.contains(e.target) && !trigger.contains(e.target)) {
-//       if (menu.classList.contains('!opacity-100')) {
-//         toggleMenu();
-//       }
-//     }
-//   });
-
-
-
-// Radial menu code 
+document.addEventListener("DOMContentLoaded", () => {
+  // Element references
   const trigger = document.getElementById('menuTrigger');
   const menu = document.getElementById('radialMenu');
-  const menuItems = document.querySelectorAll('#radialMenu a');
+  const menuItems = menu ? menu.querySelectorAll('a') : [];
+  const floatingBar = document.getElementById("floatingBar");
 
-  // Animation parameters
-  const itemAnimation = {
+  // Animation properties for menu items
+  const animationProps = {
     duration: 400,
     delayIncrement: 75,
     scaleFrom: 0.5,
     translateYFrom: '100px'
   };
 
-  function toggleMenu() {
+  // Toggle the radial menu
+  const toggleMenu = () => {
     const isOpening = !menu.classList.contains('active');
-    
-    // Toggle body scroll
+
+    // Block page scroll when menu is open
     document.body.style.overflow = isOpening ? 'hidden' : '';
-    // Toggle trigger rotation
-    trigger.classList.toggle('active');
-    
-    // Toggle menu visibility
-    menu.classList.toggle('active');
+
+    // Update the trigger and menu states
+    trigger.classList.toggle('active', isOpening);
+    menu.classList.toggle('active', isOpening);
     menu.style.pointerEvents = isOpening ? 'auto' : 'none';
 
-    // Animate menu items
-    if (isOpening) {
-      menuItems.forEach((item, index) => {
-        item.style.cssText = `
-          transition: all ${itemAnimation.duration}ms cubic-bezier(0.34, 1.56, 0.64, 1) ${index * itemAnimation.delayIncrement}ms;
-          transform: scale(1) translateY(0);
-          opacity: 1;
-        `;
-      });
-    } else {
-      menuItems.forEach((item, index) => {
-        item.style.cssText = `
-          transition: all ${itemAnimation.duration}ms cubic-bezier(0.36, 0, 0.66, -0.56) ${index * itemAnimation.delayIncrement}ms;
-          transform: scale(${itemAnimation.scaleFrom}) translateY(${itemAnimation.translateYFrom});
-          opacity: 0;
-        `;
-      });
-    }
-  }
+    // Animate each menu item
+    menuItems.forEach((item, index) => {
+      const delay = index * animationProps.delayIncrement;
+      item.style.transition = `all ${animationProps.duration}ms ${isOpening 
+        ? "cubic-bezier(0.34, 1.56, 0.64, 1)" 
+        : "cubic-bezier(0.36, 0, 0.66, -0.56)"} ${delay}ms`;
+      item.style.transform = isOpening
+        ? "scale(1) translateY(0)"
+        : `scale(${animationProps.scaleFrom}) translateY(${animationProps.translateYFrom})`;
+      item.style.opacity = isOpening ? "1" : "0";
+    });
+  };
 
-  trigger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleMenu();
-  });
+  // Set up radial menu event listeners if trigger and menu exist
+  if (trigger && menu) {
+    // Improve accessibility by setting aria attributes
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.setAttribute('aria-controls', 'radialMenu');
 
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!menu.contains(e.target) && menu.classList.contains('active')) {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       toggleMenu();
-    }
-  });
+      trigger.setAttribute('aria-expanded', menu.classList.contains('active'));
+    });
 
-
-//   // floating effect for the header
-// document.addEventListener("DOMContentLoaded", function () {
-//   let timeout;
-//   const floatingDiv = document.getElementById("floatingBar");
-//   const radialMenu = document.getElementById('radialMenu'); // Get radial menu element
-
-//   function hideDiv() {
-//       floatingDiv.style.transform = "translateY(200%)";
-//   }
-
-//   function showDiv() {
-//       floatingDiv.style.transform = "translateY(0%)";
-      
-//       // Check if radial menu is active
-//       if (radialMenu.classList.contains('active')) {
-//           clearTimeout(timeout);
-//           return; // Exit if menu is active
-//       }
-
-//       clearTimeout(timeout);
-//       timeout = setTimeout(hideDiv, 4000);
-//   }
-
-//   window.addEventListener("scroll", showDiv);
-//   document.addEventListener("touchstart", showDiv);
-//   document.addEventListener("mousemove", showDiv);
-//   timeout = setTimeout(hideDiv, 4000);
-// });
-
-// new code for radila menu active inaciitve
-  document.addEventListener("DOMContentLoaded", function () {
-    let timeout;
-    let isRadialActive = false;
-  
-    const floatingDiv = document.getElementById("floatingBar");
-    const radialMenu = document.getElementById("radialMenu");
-  
-    function hideDiv() {
-      if (!isRadialActive) {
-        floatingDiv.style.transform = "translateY(200%)";
-      }
-    }
-  
-    function showDiv() {
-      floatingDiv.style.transform = "translateY(0%)";
-  
-      clearTimeout(timeout);
-      if (!isRadialActive) {
-        timeout = setTimeout(hideDiv, 4000);
-      }
-    }
-  
-    // Listen for class changes on radialMenu
-    const observer = new MutationObserver(() => {
-      isRadialActive = radialMenu.classList.contains("active");
-  
-      // If active, show the bar and cancel hiding
-      if (isRadialActive) {
-        clearTimeout(timeout);
-        floatingDiv.style.transform = "translateY(0%)";
-      } else {
-        showDiv(); // Trigger timeout again
+    // Close menu when clicking outside the menu
+    document.addEventListener('click', (e) => {
+      if (menu.classList.contains('active') && !e.target.closest('#radialMenu')) {
+        toggleMenu();
+        trigger.setAttribute('aria-expanded', 'false');
       }
     });
-  
-    observer.observe(radialMenu, { attributes: true, attributeFilter: ["class"] });
-  
-    window.addEventListener("scroll", showDiv);
-    document.addEventListener("touchstart", showDiv);
-    document.addEventListener("mousemove", showDiv);
-  
-    timeout = setTimeout(hideDiv, 4000);
-  });
-  
+  }
 
+  // Floating bar logic
+  if (floatingBar) {
+    let timeout;
+    // Track the menu's state to pause floating bar hiding
+    let isMenuActive = menu ? menu.classList.contains("active") : false;
 
+    const hideFloatingBar = () => {
+      if (!isMenuActive) {
+        floatingBar.style.transform = "translateY(200%)";
+      }
+    };
 
+    const showFloatingBar = () => {
+      floatingBar.style.transform = "translateY(0%)";
+      clearTimeout(timeout);
+      if (!isMenuActive) {
+        timeout = setTimeout(hideFloatingBar, 4000);
+      }
+    };
 
+    // If the radial menu exists, observe its state for changes
+    let observer;
+    if (menu) {
+      observer = new MutationObserver(() => {
+        isMenuActive = menu.classList.contains("active");
+        // When the menu is active, cancel any hiding of the floating bar
+        if (isMenuActive) clearTimeout(timeout);
+        else showFloatingBar();
+      });
+      observer.observe(menu, { attributes: true, attributeFilter: ["class"] });
+    }
 
+    // Show the floating bar on user interaction
+    ["scroll", "touchstart", "mousemove"].forEach(event =>
+      window.addEventListener(event, showFloatingBar)
+    );
+
+    // Initialize the floating bar hide timeout
+    timeout = setTimeout(hideFloatingBar, 4000);
+
+    // Clean-up observer on page unload to prevent memory leaks
+    window.addEventListener("beforeunload", () => {
+      if (observer) observer.disconnect();
+    });
+  }
+
+  // Smooth scrolling behavior for menu items linking to anchors on the same page
+  if (menuItems.length) {
+    menuItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        // Only act if the pathname matches and there is a non-empty hash
+        if (window.location.pathname === this.pathname && this.hash.trim()) {
+          e.preventDefault();
+          const target = document.querySelector(this.hash);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            // Optionally close the menu after navigation
+            if (menu && menu.classList.contains('active')) {
+              toggleMenu();
+              if (trigger) trigger.setAttribute('aria-expanded', 'false');
+            }
+          }
+        }
+      });
+    });
+  }
+});
