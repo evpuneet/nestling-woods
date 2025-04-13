@@ -8104,6 +8104,11 @@
       font-size: 4px;
     }
   }
+  .lg\:text-\[5px\] {
+    @media (width >= 64rem) {
+      font-size: 5px;
+    }
+  }
   .lg\:text-\[13px\] {
     @media (width >= 64rem) {
       font-size: 13px;
