@@ -834,6 +834,9 @@
   .mt-\[30px\] {
     margin-top: 30px;
   }
+  .mt-\[34px\] {
+    margin-top: 34px;
+  }
   .mt-\[40px\] {
     margin-top: 40px;
   }
@@ -6268,6 +6271,11 @@
   .md\:mt-16 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:mt-\[14px\] {
+    @media (width >= 48rem) {
+      margin-top: 14px;
     }
   }
   .md\:mt-\[16px\] {
