@@ -1034,33 +1034,56 @@
             </div>
             <div class="flex flex-col md:flex-row w-full h-[90vh]">
                 <div class="w-full md:w-[65%] h-[80%] md:h-full mx-auto">
-                    <section id="map" class="w-full h-full scroll-mt-24 overflow-hidden">
-                        <div class="relative w-full h-full">
-                            <div class="relative w-full h-full overflow-hidden">
-                                <img
-                                    alt="Tab content"
-                                    loading="eager"
-                                    decoding="async"
-                                    data-nimg="fill"
-                                    class="w-full h-full object-cover open-lightbox"
-                                    sizes="100vw"
-                                    src="./public/locationMap.webp"
-                                    style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                                />
-                            </div>
-                            <div class="w-full absolute top-0 left-1/2 transform -translate-x-1/2 rounded-tl-none rounded-tr-none rounded-bl-lg rounded-br-lg flex justify-center overflow-hidden" style="z-index: 500;">
-                                <button
-                                    aria-label="Tab Map"
-                                    class="outline-none py-2 px-5 lg:px-10 font-supera600 text-white   bg-theme rounded-bl-2xl sm:rounded-bl-3xl text-sm lg:text-lg tracking-wide"
-                                >
-                                   Location Map
-                                </button>
-                                <button aria-label="Tab Google Map" class="outline-none py-2 px-5 lg:px-10 font-supera600 bg-white text-theme rounded-br-2xl sm:rounded-br-3xl text-sm lg:text-lg tracking-wide">
-                                    Google Map
-                                </button>
-                            </div>
+                  <section id="map" class="w-full h-full scroll-mt-24 overflow-hidden">
+                    <div class="relative w-full h-full">
+                        
+                        <!-- Satellite / Location Map Container -->
+                        <div id="locationMapContainer" class="relative w-full h-full overflow-hidden">
+                            <img
+                                alt="Location Map"
+                                loading="eager"
+                                decoding="async"
+                                data-nimg="fill"
+                                class="w-full h-full object-contain open-lightbox"
+                                sizes="100vw"
+                                src="./public/locationMap.webp"
+                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                            />
                         </div>
-                    </section>
+                
+                        <!-- Google Map Container -->
+                        <div id="googleMapContainer" class="relative w-full h-full hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3427.4168909926834!2d77.06131087558617!3d30.880571374513334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDUyJzUwLjEiTiA3N8KwMDMnNTAuMCJF!5e0!3m2!1sen!2sin!4v1744563837930!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style="border: 0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                
+                        <!-- Map Buttons -->
+                        <div class="w-full absolute top-0 left-1/2 transform -translate-x-1/2 rounded-tl-none rounded-tr-none rounded-bl-lg rounded-br-lg flex justify-center overflow-hidden" style="z-index: 500;">
+                            <button
+                                id="locationMapBtn"
+                                aria-label="Tab Location Map"
+                                class="outline-none py-2 px-5 lg:px-10 font-supera600 text-white bg-theme rounded-bl-2xl sm:rounded-bl-3xl text-sm lg:text-lg tracking-wide"
+                            >
+                               Location Map
+                            </button>
+                            <button
+                                id="googleMapBtn"
+                                aria-label="Tab Google Map"
+                                class="outline-none py-2 px-5 lg:px-10 font-supera600 bg-white text-theme rounded-br-2xl sm:rounded-br-3xl text-sm lg:text-lg tracking-wide"
+                            >
+                                Google Map
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
                 </div>
                 <div class="w-full md:w-[35%] h-full -mt-0.5 md:mt-0">
                     <div class="w-full h-full">
@@ -1499,40 +1522,54 @@
       </div>
       </div>
   
-       <!-- maps -->
-      <section
-       id="map"
-       class="w-full h-[60vh] overflow-hidden my-[60px] hidden md:block"
+      <!-- maps -->
+    <section
+    id="map"
+    class="w-full h-[60vh] overflow-hidden my-[60px] hidden md:block"
+  >
+    <div class="relative w-full h-full mapParent-lg">
+     <div class="relative w-full h-full overflow-hidden ">
+       <iframe
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.786368153347!2d76.80669137531906!3d30.618288291155057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe9ec15cbfd03%3A0x4cb1dcaa577519c8!2sRealty%20Nivesh!5e1!3m2!1sen!2sin!4v1744559228889!5m2!1sen!2sin"
+         width="100%"
+         height="100%"
+         style="border: 0;"
+         allowfullscreen=""
+         loading="lazy"
+         referrerpolicy="no-referrer-when-downgrade"
+       ></iframe>
+
+     </div>
+      <div class="relative w-full h-full hidden">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3433.5133579470303!2d76.8070682793457!3d30.619486707474756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe9ec15cbfd03%3A0x4cb1dcaa577519c8!2sRealty%20Nivesh!5e0!3m2!1sen!2sin!4v1732694454014!5m2!1sen!2sin"
+          title="tab-content"
+          width="100%"
+          height="100%"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div
+       style="z-index: 10"
+       class="w-full absolute top-0 left-1/2 transform -translate-x-1/2 rounded-tl-none rounded-tr-none rounded-bl-lg rounded-br-lg flex justify-center overflow-hidden"
      >
-       <div class="relative w-full h-full">
-         <div class="relative w-full h-full overflow-hidden">
-           <iframe
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3433.5133579470303!2d76.8070682793457!3d30.619486707474756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe9ec15cbfd03%3A0x4cb1dcaa577519c8!2sRealty%20Nivesh!5e0!3m2!1sen!2sin!4v1732694454014!5m2!1sen!2sin"
-             title="tab-content"
-             width="100%"
-             height="100%"
-             allowfullscreen=""
-             loading="lazy"
-           ></iframe>
-         </div>
-         <div
-           style="z-index: 10"
-           class="w-full absolute top-0 left-1/2 transform -translate-x-1/2 rounded-tl-none rounded-tr-none rounded-bl-lg rounded-br-lg flex justify-center overflow-hidden"
-         >
-           <button
-             aria-label="Tab Near By"
-             class="outline-none py-2 px-5 lg:px-10 font-supera600 text-theme bg-white border-transparent rounded-bl-2xl sm:rounded-bl-3xl text-sm lg:text-lg tracking-wide"
-           >
-             Satellite</button
-           ><button
-             aria-label="Tab Google Map"
-             class="outline-none py-2 px-5 lg:px-10 font-supera600 border-gray-300 text-white bg-theme rounded-br-2xl sm:rounded-br-3xl text-sm lg:text-lg tracking-wide"
-           >
-             Google Map
-           </button>
-         </div>
-       </div>
-      </section>
+       <button
+         id="satelliteBtn-lg"
+         aria-label="Tab Near By"
+         class="outline-none py-2 px-5 lg:px-10 font-supera600 bg-theme text-white border-transparent rounded-bl-2xl sm:rounded-bl-3xl text-sm lg:text-lg tracking-wide cursor-pointer"
+       >
+         Satellite</button
+       ><button
+         id="googleBtn-lg"
+         aria-label="Tab Google Map"
+         class="outline-none py-2 px-5 lg:px-10 font-supera600 border-gray-300  text-theme bg-white rounded-br-2xl sm:rounded-br-3xl text-sm lg:text-lg tracking-wide cursor-pointer"
+       >
+         Google Map
+       </button>
+     </div>
+    </div>
+   </section>
   
   
       <!-- contact us -->
@@ -1969,13 +2006,25 @@
       </section>
   
       <!-- map mob -->
-      <section
-      id="map"
-      class="w-full h-[60vh] overflow-hidden mt-[60px] md:hidden block"
-    >
-      <div class="relative w-full h-full">
-        <div class="relative w-full h-full overflow-hidden">
-          <iframe
+    <section
+    id="map"
+    class="w-full h-[60vh] overflow-hidden mt-[60px] md:hidden block"
+  >
+    <div class="relative w-full h-full mapParent">
+      <div class="relative w-full h-full overflow-hidden ">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.786368153347!2d76.80669137531906!3d30.618288291155057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe9ec15cbfd03%3A0x4cb1dcaa577519c8!2sRealty%20Nivesh!5e1!3m2!1sen!2sin!4v1744559228889!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style="border: 0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+      </div>
+      <div class="relative w-full h-full hidden ">
+        <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3433.5133579470303!2d76.8070682793457!3d30.619486707474756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe9ec15cbfd03%3A0x4cb1dcaa577519c8!2sRealty%20Nivesh!5e0!3m2!1sen!2sin!4v1732694454014!5m2!1sen!2sin"
             title="tab-content"
             width="100%"
@@ -1983,25 +2032,27 @@
             allowfullscreen=""
             loading="lazy"
           ></iframe>
-        </div>
-        <div
-          style="z-index: 10"
-          class="w-full absolute top-0 left-1/2 transform -translate-x-1/2 rounded-tl-none rounded-tr-none rounded-bl-lg rounded-br-lg flex justify-center overflow-hidden"
-        >
-          <button
-            aria-label="Tab Near By"
-            class="outline-none py-2 px-5 lg:px-10 font-supera600 text-theme bg-white border-transparent rounded-bl-2xl sm:rounded-bl-3xl text-sm lg:text-lg tracking-wide"
-          >
-            Satellite</button
-          ><button
-            aria-label="Tab Google Map"
-            class="outline-none py-2 px-5 lg:px-10 font-supera600 border-gray-300 bg-[#244E41] text-white rounded-br-2xl sm:rounded-br-3xl text-sm lg:text-lg tracking-wide"
-          >
-            Google Map
-          </button>
-        </div>
       </div>
-     </section>
+      <div
+        style="z-index: 10"
+        class="w-full absolute top-0 left-1/2 transform -translate-x-1/2 rounded-tl-none rounded-tr-none rounded-bl-lg rounded-br-lg flex justify-center overflow-hidden"
+      >
+        <button
+          id="satelliteBtn-mob"
+          aria-label="Tab Near By"
+          class="outline-none py-2 px-5 lg:px-10 font-supera600 bg-theme text-white border-transparent rounded-bl-2xl sm:rounded-bl-3xl text-sm lg:text-lg tracking-wide"
+        >
+          Satellite</button
+        ><button
+          id="googleBtn-mob"
+          aria-label="Tab Google Map"
+          class="outline-none py-2 px-5 lg:px-10 font-supera600 border-gray-300  text-theme bg-white rounded-br-2xl sm:rounded-br-3xl text-sm lg:text-lg tracking-wide"
+        >
+          Google Map
+        </button>
+      </div>
+    </div>
+   </section>
   
       <!-- need assisstance div -->  
       <div
@@ -2317,9 +2368,7 @@
        <!-- footer -->
 
       <footer>
-        <div
-          class="w-full bg-footer-lg bg-footer-mob"
-        >
+        <div class="w-full bg-footer-lg bg-footer-mob">
           <div class="w-full h-full">
             <div class="lg:container mx-auto pt-[35px]">
               <a href="/"
@@ -2644,9 +2693,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="flex px-4 cxs:px-[20px] xl:px-[60px] flex-col sm:flex-row justify-center sm:justify-between gap-1 sm:gap-0 py-[14px] bg-[#F1F1F1]"
-          >
+          <div class="flex px-4 cxs:px-[20px] xl:px-[60px] flex-col sm:flex-row justify-center sm:justify-between gap-1 sm:gap-0 py-[14px] bg-[#F1F1F1]">
             <div
               class="text-[#000] flex gap-3 md:gap-5 lg:gap-10 justify-center sm:justify-normal"
             >
@@ -2725,6 +2772,8 @@
 <script src="./src/js/locationSwiper.js"></script>
 <!-- <script src="./src/js/locationReadmore.js"></script> -->
 <script src="./src/js/copyright.js"></script>
+<script src="./src/js/googleMapTabing.js"></script>
+<script src="./src/js/locationMapGoogle.js"></script>
 
 
 

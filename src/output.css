@@ -79,6 +79,7 @@
     --animate-spin: spin 1s linear infinite;
     --blur-sm: 8px;
     --blur-md: 12px;
+    --aspect-video: 16 / 9;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -1031,6 +1032,9 @@
   }
   .field-sizing-fixed {
     field-sizing: fixed;
+  }
+  .aspect-\[9\/16\] {
+    aspect-ratio: 9/16;
   }
   .aspect-auto {
     aspect-ratio: auto;
@@ -6409,6 +6413,11 @@
       display: none;
     }
   }
+  .md\:aspect-video {
+    @media (width >= 48rem) {
+      aspect-ratio: var(--aspect-video);
+    }
+  }
   .md\:size-\[53\.14px\] {
     @media (width >= 48rem) {
       width: 53.14px;
@@ -6928,6 +6937,11 @@
   .md\:bg-none {
     @media (width >= 48rem) {
       background-image: none;
+    }
+  }
+  .md\:object-cover {
+    @media (width >= 48rem) {
+      object-fit: cover;
     }
   }
   .md\:p-0 {
