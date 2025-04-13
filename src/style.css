@@ -471,7 +471,7 @@ body {
   }
 
   .bg-spec{
-    background: url("../public/specHero.png");
+    background: url("../public/specHero.webp");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1520,4 +1520,11 @@ body #sidebarWrapper {
   .top190{
     margin-top: 250px !important;
   }
+}
+
+.fancybox-container{
+  z-index: 9999999999999 !important;
+}
+.fancybox-caption__body{
+  display: none;
 }
