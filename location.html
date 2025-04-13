@@ -1045,9 +1045,19 @@
                                 loading="eager"
                                 decoding="async"
                                 data-nimg="fill"
-                                class="w-full h-full object-contain open-lightbox"
+                                class="w-full h-full object-contain open-lightbox hidden md:block"
                                 sizes="100vw"
                                 src="./public/locationMap.webp"
+                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                            />
+                            <img
+                                alt="Location Map"
+                                loading="eager"
+                                decoding="async"
+                                data-nimg="fill"
+                                class="w-full h-full object-contain open-lightbox block md:hidden"
+                                sizes="100vw"
+                                src="./public/locationMap-mob.png"
                                 style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
                             />
                         </div>
@@ -2775,6 +2785,7 @@
 <script src="./src/js/copyright.js"></script>
 <script src="./src/js/googleMapTabing.js"></script>
 <script src="./src/js/locationMapGoogle.js"></script>
+<script src="./src/js/lightHouse.js"></script>
 
 
 

@@ -853,6 +853,12 @@
   .mt-\[70px\] {
     margin-top: 70px;
   }
+  .mt-\[80px\] {
+    margin-top: 80px;
+  }
+  .mt-\[100px\] {
+    margin-top: 100px;
+  }
   .mr-1 {
     margin-right: calc(var(--spacing) * 1);
   }
@@ -1229,6 +1235,9 @@
   }
   .h-\[80vh\] {
     height: 80vh;
+  }
+  .h-\[90\%\] {
+    height: 90%;
   }
   .h-\[90px\] {
     height: 90px;
@@ -1789,6 +1798,12 @@
     --tw-scale-x: 100%;
     --tw-scale-y: 100%;
     --tw-scale-z: 100%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .scale-125 {
+    --tw-scale-x: 125%;
+    --tw-scale-y: 125%;
+    --tw-scale-z: 125%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .scale-3d {
@@ -5620,6 +5635,21 @@
       scroll-margin-top: calc(var(--spacing) * 20);
     }
   }
+  .sm\:grid-rows-5 {
+    @media (width >= 40rem) {
+      grid-template-rows: repeat(5, minmax(0, 1fr));
+    }
+  }
+  .sm\:grid-rows-7 {
+    @media (width >= 40rem) {
+      grid-template-rows: repeat(7, minmax(0, 1fr));
+    }
+  }
+  .sm\:grid-rows-8 {
+    @media (width >= 40rem) {
+      grid-template-rows: repeat(8, minmax(0, 1fr));
+    }
+  }
   .sm\:grid-rows-9 {
     @media (width >= 40rem) {
       grid-template-rows: repeat(9, minmax(0, 1fr));
@@ -6446,6 +6476,11 @@
       height: calc(var(--spacing) * 16);
     }
   }
+  .md\:h-66 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 66);
+    }
+  }
   .md\:h-\[36px\] {
     @media (width >= 48rem) {
       height: 36px;
@@ -6464,6 +6499,11 @@
   .md\:h-\[54px\] {
     @media (width >= 48rem) {
       height: 54px;
+    }
+  }
+  .md\:h-\[60\] {
+    @media (width >= 48rem) {
+      height: 60;
     }
   }
   .md\:h-\[63px\] {
@@ -6529,6 +6569,11 @@
   .md\:h-\[610px\] {
     @media (width >= 48rem) {
       height: 610px;
+    }
+  }
+  .md\:h-\[660px\] {
+    @media (width >= 48rem) {
+      height: 660px;
     }
   }
   .md\:h-auto {
@@ -6725,6 +6770,11 @@
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-3 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
   .md\:grid-cols-4 {
@@ -6949,6 +6999,11 @@
   .md\:bg-none {
     @media (width >= 48rem) {
       background-image: none;
+    }
+  }
+  .md\:object-contain {
+    @media (width >= 48rem) {
+      object-fit: contain;
     }
   }
   .md\:object-cover {
