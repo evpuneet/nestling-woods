@@ -5,21 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Nestling Woods" />
-    <meta itemprop="description" content="Nestling Woods is a real estate website" />
-    <meta itemprop="image" content="" href="./public/hero.png"/>
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://nestlingwoods.netlify.app/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Nestling Woods" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="" />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Nestling Woods" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="" />
     <link href="./src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -5514,7 +5500,7 @@
                       </div>
                       <form action="#" class="h-full overflow-y-auto pr-2">
                           <div class="w-full h-full flex flex-col justify-between md:justify-center lg:justify-start gap-y-3 lg:gap-y-5">
-                              <div class="flex flex-col max-w-full md:max-w-[405px]">
+                              <!-- <div class="flex flex-col max-w-full md:max-w-[405px]">
                                   <div class="mt-1 md:mt-2 pr-2 pt-2.5 text-[#514E4E] bg-transparent border-b-[0.5px] border-[#AFAFAF] font-supera500 text-[15px] lg:text-[16px] overflow-hidden">
                                       <input placeholder="First Name" class="w-full h-full placeholder:text-[#514E4E] outline-none bg-transparent" type="text" value="" name="name" />
                                   </div>
@@ -5543,6 +5529,32 @@
                                       <p class="ml-2.5 max-w-[350px] tracking-wide font-supera500 text-[11px] text-[#737474]">I agree to receive newsletters, or relevant marketing content and Nestling woods Terms and Conditions</p>
                                   </div>
                                   <button aria-label="submit" type="submit" class="mt-5 md:mt-10 w-full h-[40px] bg-[#32644D] rounded-[20px] text-[#fff] font-supera500 tracking-wide text-[16px]">Get OTP</button>
+                              </div> -->
+                              <div class="flex flex-col max-w-full md:max-w-[405px]">
+                                  <div class="mt-1 md:mt-2 pt-2.5 text-[#514E4E] flex justify-between gap-3 bg-transparent border-b-[0.5px] border-[#AFAFAF] font-supera500 text-[15px] lg:text-[16px] overflow-hidden">
+                                      <h3 class="font-supera500 text-[14px] cursor-default">Please enter the OTP send to <span>+91 8696****XX</span></h3>
+                                      <h3 class="text-theme font-supera500 text-[14px] cursor-pointer">change</h3>
+                                  </div>
+                              </div>
+                              <div class="flex flex-col max-w-full">
+                                  <div
+                                      class="w-full h-full flex justify-between items-center gap-x-3 text-[#514E4E] bg-transparent border-b-[0.5px] border-[#AFAFAF] font-supera500 text-[15px] lg:text-[16px] overflow-hidden"
+                                  >
+                                    <div class="w-full flex items-center">
+                                      <div class="PhoneInput">
+                                          <input autocomplete="tel" placeholder="OTP*" class="PhoneInputInput outline-none" type="tel" value="" />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="flex justify-between items-center">
+                                    <div>
+                                      <p class="pt-1.5 font-supera400 text-[12px] text-[#7D7D7D] cursor-default">Didn't  get the OTP? <span class="cursor-pointer text-theme"> Resend</span></p>
+                                    </div>
+                                    <div><p class="pt-1.5 font-supera400 text-[12px] text-[#7D7D7D] cursor-default">00:28</p></span></p></div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <button aria-label="submit" type="submit" class="cursor-pointer w-[50%] h-[40px] bg-[#32644D] outline-none rounded-[20px] text-[#fff] font-supera500 tracking-wide text-[16px]">Submit</button>
                               </div>
                           </div>
                       </form>
@@ -6003,7 +6015,7 @@
                                   </div>
                               </div>
                               <div class="cursor-pointer w-full rounded-md overflow-hidden">
-                                  <button aria-label="contact now" class="w-full py-[7px] tracking-wider bg-backgroud-theme-local bg-cover bg-right-bottom text-[13px] font-supera700 text-white uppercase cursor-pointer">Contact Now</button>
+                                  <button aria-label="contact now" data-title="Contact Us" class="w-full py-[7px] tracking-wider bg-theme text-[13px] font-supera700 text-white uppercase cursor-pointer openModalBtn">Contact Now</button>
                               </div>
                               <div class="w-full flex justify-between gap-x-[10px] pt-1 pb-3">
                                   <a href="tel:+91 96973 00066"" aria-label="call now" class="cursor-pointer flex items-center pl-[10px] w-1/2 border-[1.5px] border-[#000] rounded-lg py-1.5">
